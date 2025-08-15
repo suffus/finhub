@@ -1,0 +1,1338 @@
+// CRM Database Schema for Prisma
+// Supports extensible inbound marketing and sales-focused CRM
+// Modified to use extensible lookup tables instead of fixed enums
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ============================================================================
+// CORE USER MANAGEMENT
+// ============================================================================
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  firstName String
+  lastName  String
+  avatar    String?
+  
+  // Role relationship (extensible)
+  roleId    String?
+  role      UserRole? @relation(fields: [roleId], references: [id])
+  
+  isActive  Boolean  @default(true)
+  
+  // Multi-tenancy
+  tenantId  String
+  tenant    Tenant   @relation(fields: [tenantId], references: [id])
+  
+  // Audit fields
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  createdBy String?
+  
+  // Relationships
+  assignedLeads         Lead[]        @relation("AssignedUser")
+  assignedDeals         Deal[]        @relation("AssignedUser")
+  assignedTasks         Task[]        @relation("AssignedUser")
+  createdTasks          Task[]        @relation("CreatedBy")
+  communications        Communication[]
+  activityLogs          ActivityLog[]
+  territories           Territory[]
+  
+  // Contact information
+  phoneNumbers          PhoneNumber[]
+  emailAddresses        EmailAddress[]
+  addresses             Address[]
+  socialMediaAccounts   SocialMediaAccount[]
+  
+  @@map("users")
+  @@index([tenantId])
+  @@index([email])
+  @@index([roleId])
+}
+
+model Tenant {
+  id       String @id @default(cuid())
+  name     String
+  subdomain String @unique
+  isActive Boolean @default(true)
+  
+  // Settings
+  settings Json?
+  
+  // Audit fields
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  // Relationships
+  users           User[]
+  companies       Company[]
+  contacts        Contact[]
+  leads           Lead[]
+  deals           Deal[]
+  customFields    CustomField[]
+  customObjects   CustomObject[]
+  pipelines       Pipeline[]
+  stages          Stage[]
+  territories     Territory[]
+  marketingSources MarketingSource[]
+  marketingAssets MarketingAsset[]
+  
+  // Extensible lookup tables
+  userRoles              UserRole[]
+  leadStatuses           LeadStatus[]
+  marketingSourceTypes   MarketingSourceType[]
+  marketingAssetTypes    MarketingAssetType[]
+  communicationTypes     CommunicationType[]
+  taskTypes              TaskType[]
+  territoryTypes         TerritoryType[]
+  industries             Industry[]
+  companySizes           CompanySize[]
+  leadTemperatures       LeadTemperature[]
+  
+  // Contact information lookup tables
+  phoneNumberTypes       PhoneNumberType[]
+  emailAddressTypes      EmailAddressType[]
+  addressTypes           AddressType[]
+  socialMediaTypes       SocialMediaType[]
+  
+  // Contact information entities
+  phoneNumbers           PhoneNumber[]
+  emailAddresses         EmailAddress[]
+  addresses              Address[]
+  socialMediaAccounts    SocialMediaAccount[]
+  
+  @@map("tenants")
+}
+
+// ============================================================================
+// EXTENSIBLE LOOKUP TABLES
+// ============================================================================
+
+model UserRole {
+  id          String  @id @default(cuid())
+  name        String
+  code        String  // For system reference (e.g., 'ADMIN', 'SALES_REP')
+  description String?
+  isActive    Boolean @default(true)
+  isSystem    Boolean @default(false) // System roles can't be deleted
+  
+  // Permissions - stored as JSON for flexibility
+  permissions Json?
+  
+  // Multi-tenancy
+  tenantId    String
+  tenant      Tenant  @relation(fields: [tenantId], references: [id])
+  
+  // Audit fields
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  // Relationships
+  users       User[]
+  
+  @@map("user_roles")
+  @@index([tenantId])
+  @@unique([tenantId, code])
+}
+
+
+
+model LeadStatus {
+  id          String  @id @default(cuid())
+  name        String
+  code        String  // For system reference (e.g., 'NEW', 'QUALIFIED')
+  description String?
+  color       String? // For UI display
+  order       Int
+  isActive    Boolean @default(true)
+  isSystem    Boolean @default(false)
+  
+  // Multi-tenancy
+  tenantId    String
+  tenant      Tenant  @relation(fields: [tenantId], references: [id])
+  
+  // Audit fields
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  // Relationships
+  leads       Lead[]
+  
+  @@map("lead_statuses")
+  @@index([tenantId])
+  @@index([order])
+  @@unique([tenantId, code])
+}
+
+model LeadTemperature {
+  id          String  @id @default(cuid())
+  name        String
+  code        String  // For system reference (e.g., 'HOT', 'WARM', 'COLD')
+  description String?
+  color       String? // For UI display
+  order       Int
+  isActive    Boolean @default(true)
+  
+  // Multi-tenancy
+  tenantId    String
+  tenant      Tenant  @relation(fields: [tenantId], references: [id])
+  
+  // Audit fields
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  // Relationships
+  leads       Lead[]
+  
+  @@map("lead_temperatures")
+  @@index([tenantId])
+  @@index([order])
+  @@unique([tenantId, code])
+}
+
+model Industry {
+  id          String  @id @default(cuid())
+  name        String
+  code        String
+  description String?
+  isActive    Boolean @default(true)
+  
+  // Multi-tenancy
+  tenantId    String
+  tenant      Tenant  @relation(fields: [tenantId], references: [id])
+  
+  // Audit fields
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  // Relationships
+  companies   Company[]
+  
+  @@map("industries")
+  @@index([tenantId])
+  @@unique([tenantId, code])
+}
+
+model CompanySize {
+  id          String  @id @default(cuid())
+  name        String
+  code        String
+  description String?
+  minEmployees Int?
+  maxEmployees Int?
+  isActive    Boolean @default(true)
+  
+  // Multi-tenancy
+  tenantId    String
+  tenant      Tenant  @relation(fields: [tenantId], references: [id])
+  
+  // Audit fields
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  // Relationships
+  companies   Company[]
+  
+  @@map("company_sizes")
+  @@index([tenantId])
+  @@unique([tenantId, code])
+}
+
+// ============================================================================
+// CONTACT INFORMATION TABLES
+// ============================================================================
+
+model PhoneNumberType {
+  id          String  @id @default(cuid())
+  name        String
+  code        String  // For system reference (e.g., 'WORK', 'HOME', 'PERSONAL_CELL')
+  description String?
+  isActive    Boolean @default(true)
+  
+  // Multi-tenancy
+  tenantId    String
+  tenant      Tenant  @relation(fields: [tenantId], references: [id])
+  
+  // Audit fields
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  // Relationships
+  phoneNumbers PhoneNumber[]
+  
+  @@map("phone_number_types")
+  @@index([tenantId])
+  @@unique([tenantId, code])
+}
+
+model PhoneNumber {
+  id          String   @id @default(cuid())
+  number      String
+  extension   String?
+  isPrimary   Boolean  @default(false)
+  
+  // Type relationship
+  typeId      String?
+  type        PhoneNumberType? @relation(fields: [typeId], references: [id])
+  
+  // Polymorphic relationships
+  entityId    String
+  entityType  String   // 'Company', 'Contact', 'Lead', 'User'
+  
+  // Multi-tenancy
+  tenantId    String
+  tenant      Tenant   @relation(fields: [tenantId], references: [id])
+  
+  // Audit fields
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  // Direct relationships
+  company     Company? @relation(fields: [entityId], references: [id])
+  contact     Contact? @relation(fields: [entityId], references: [id])
+  lead        Lead?    @relation(fields: [entityId], references: [id])
+  user        User?    @relation(fields: [entityId], references: [id])
+  
+  @@map("phone_numbers")
+  @@index([tenantId])
+  @@index([entityId, entityType])
+  @@index([typeId])
+}
+
+model EmailAddressType {
+  id          String  @id @default(cuid())
+  name        String
+  code        String  // For system reference (e.g., 'WORK', 'PERSONAL', 'BILLING')
+  description String?
+  isActive    Boolean @default(true)
+  
+  // Multi-tenancy
+  tenantId    String
+  tenant      Tenant  @relation(fields: [tenantId], references: [id])
+  
+  // Audit fields
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  // Relationships
+  emailAddresses EmailAddress[]
+  
+  @@map("email_address_types")
+  @@index([tenantId])
+  @@unique([tenantId, code])
+}
+
+model EmailAddress {
+  id          String   @id @default(cuid())
+  email       String
+  isPrimary   Boolean  @default(false)
+  isVerified  Boolean  @default(false)
+  
+  // Type relationship
+  typeId      String?
+  type        EmailAddressType? @relation(fields: [typeId], references: [id])
+  
+  // Polymorphic relationships
+  entityId    String
+  entityType  String   // 'Company', 'Contact', 'Lead', 'User'
+  
+  // Multi-tenancy
+  tenantId    String
+  tenant      Tenant   @relation(fields: [tenantId], references: [id])
+  
+  // Audit fields
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  // Direct relationships
+  company     Company? @relation(fields: [entityId], references: [id])
+  contact     Contact? @relation(fields: [entityId], references: [id])
+  lead        Lead?    @relation(fields: [entityId], references: [id])
+  user        User?    @relation(fields: [entityId], references: [id])
+  
+  @@map("email_addresses")
+  @@index([tenantId])
+  @@index([email])
+  @@index([entityId, entityType])
+  @@index([typeId])
+}
+
+model AddressType {
+  id          String  @id @default(cuid())
+  name        String
+  code        String  // For system reference (e.g., 'BILLING', 'SHIPPING', 'OFFICE')
+  description String?
+  isActive    Boolean @default(true)
+  
+  // Multi-tenancy
+  tenantId    String
+  tenant      Tenant  @relation(fields: [tenantId], references: [id])
+  
+  // Audit fields
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  // Relationships
+  addresses   Address[]
+  
+  @@map("address_types")
+  @@index([tenantId])
+  @@unique([tenantId, code])
+}
+
+model Address {
+  id          String   @id @default(cuid())
+  street1     String?
+  street2     String?
+  city        String?
+  state       String?
+  postalCode  String?
+  country     String?
+  isPrimary   Boolean  @default(false)
+  
+  // Type relationship
+  typeId      String?
+  type        AddressType? @relation(fields: [typeId], references: [id])
+  
+  // Polymorphic relationships
+  entityId    String
+  entityType  String   // 'Company', 'Contact', 'Lead', 'User'
+  
+  // Multi-tenancy
+  tenantId    String
+  tenant      Tenant   @relation(fields: [tenantId], references: [id])
+  
+  // Audit fields
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  // Direct relationships
+  company     Company? @relation(fields: [entityId], references: [id])
+  contact     Contact? @relation(fields: [entityId], references: [id])
+  lead        Lead?    @relation(fields: [entityId], references: [id])
+  user        User?    @relation(fields: [entityId], references: [id])
+  
+  @@map("addresses")
+  @@index([tenantId])
+  @@index([entityId, entityType])
+  @@index([typeId])
+}
+
+model SocialMediaType {
+  id          String  @id @default(cuid())
+  name        String
+  code        String  // For system reference (e.g., 'LINKEDIN', 'TWITTER', 'FACEBOOK')
+  icon        String? // Icon class or URL
+  baseUrl     String? // Base URL for the platform (e.g., 'https://linkedin.com/in/')
+  isActive    Boolean @default(true)
+  
+  // Multi-tenancy
+  tenantId    String
+  tenant      Tenant  @relation(fields: [tenantId], references: [id])
+  
+  // Audit fields
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  // Relationships
+  socialMediaAccounts SocialMediaAccount[]
+  
+  @@map("social_media_types")
+  @@index([tenantId])
+  @@unique([tenantId, code])
+}
+
+model SocialMediaAccount {
+  id          String   @id @default(cuid())
+  username    String?  // Username or handle
+  url         String?  // Full URL to profile
+  isPrimary   Boolean  @default(false)
+  
+  // Type relationship
+  typeId      String?
+  type        SocialMediaType? @relation(fields: [typeId], references: [id])
+  
+  // Polymorphic relationships
+  entityId    String
+  entityType  String   // 'Company', 'Contact', 'Lead', 'User'
+  
+  // Multi-tenancy
+  tenantId    String
+  tenant      Tenant   @relation(fields: [tenantId], references: [id])
+  
+  // Audit fields
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  // Direct relationships
+  company     Company? @relation(fields: [entityId], references: [id])
+  contact     Contact? @relation(fields: [entityId], references: [id])
+  lead        Lead?    @relation(fields: [entityId], references: [id])
+  user        User?    @relation(fields: [entityId], references: [id])
+  
+  @@map("social_media_accounts")
+  @@index([tenantId])
+  @@index([entityId, entityType])
+  @@index([typeId])
+}
+
+model MarketingSourceType {
+  id          String  @id @default(cuid())
+  name        String
+  code        String  // For system reference (e.g., 'WEBSITE', 'SOCIAL_MEDIA')
+  description String?
+  color       String? // For UI display
+  isActive    Boolean @default(true)
+  
+  // Multi-tenancy
+  tenantId    String
+  tenant      Tenant  @relation(fields: [tenantId], references: [id])
+  
+  // Audit fields
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  // Relationships
+  marketingSources MarketingSource[]
+  
+  @@map("marketing_source_types")
+  @@index([tenantId])
+  @@unique([tenantId, code])
+}
+
+model MarketingAssetType {
+  id          String  @id @default(cuid())
+  name        String
+  code        String  // For system reference (e.g., 'LANDING_PAGE', 'EMAIL_TEMPLATE')
+  description String?
+  color       String? // For UI display
+  isActive    Boolean @default(true)
+  
+  // Multi-tenancy
+  tenantId    String
+  tenant      Tenant  @relation(fields: [tenantId], references: [id])
+  
+  // Audit fields
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  // Relationships
+  marketingAssets MarketingAsset[]
+  
+  @@map("marketing_asset_types")
+  @@index([tenantId])
+  @@unique([tenantId, code])
+}
+
+model CommunicationType {
+  id          String  @id @default(cuid())
+  name        String
+  code        String  // For system reference (e.g., 'EMAIL', 'PHONE_CALL')
+  description String?
+  icon        String? // For UI display
+  isActive    Boolean @default(true)
+  
+  // Multi-tenancy
+  tenantId    String
+  tenant      Tenant  @relation(fields: [tenantId], references: [id])
+  
+  // Audit fields
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  // Relationships
+  communications Communication[]
+  
+  @@map("communication_types")
+  @@index([tenantId])
+  @@unique([tenantId, code])
+}
+
+model TaskType {
+  id          String  @id @default(cuid())
+  name        String
+  code        String  // For system reference (e.g., 'CALL', 'EMAIL')
+  description String?
+  color       String? // For UI display
+  icon        String? // For UI display
+  isActive    Boolean @default(true)
+  
+  // Multi-tenancy
+  tenantId    String
+  tenant      Tenant  @relation(fields: [tenantId], references: [id])
+  
+  // Audit fields
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  // Relationships
+  tasks       Task[]
+  
+  @@map("task_types")
+  @@index([tenantId])
+  @@unique([tenantId, code])
+}
+
+model TerritoryType {
+  id          String  @id @default(cuid())
+  name        String
+  code        String  // For system reference (e.g., 'GEOGRAPHIC', 'INDUSTRY')
+  description String?
+  isActive    Boolean @default(true)
+  
+  // Multi-tenancy
+  tenantId    String
+  tenant      Tenant  @relation(fields: [tenantId], references: [id])
+  
+  // Audit fields
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  // Relationships
+  territories Territory[]
+  
+  @@map("territory_types")
+  @@index([tenantId])
+  @@unique([tenantId, code])
+}
+
+// ============================================================================
+// COMPANIES AND CONTACTS
+// ============================================================================
+
+model Company {
+  id          String  @id @default(cuid())
+  name        String
+  website     String?
+  domain      String?
+  
+  // Industry relationship (extensible)
+  industryId  String?
+  industry    Industry? @relation(fields: [industryId], references: [id])
+  
+  // Company size relationship (extensible)
+  sizeId      String?
+  size        CompanySize? @relation(fields: [sizeId], references: [id])
+  
+  revenue     Decimal?
+  
+  // External IDs
+  externalId  String?
+  
+  // Multi-tenancy
+  tenantId    String
+  tenant      Tenant  @relation(fields: [tenantId], references: [id])
+  
+  // Audit fields
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  createdBy   String?
+  isDeleted   Boolean  @default(false)
+  deletedAt   DateTime?
+  
+  // Relationships
+  contacts    Contact[]
+  deals       Deal[]
+  leads       Lead[]
+  customFieldValues CustomFieldValue[]
+  activityLogs      ActivityLog[]
+  
+  // Contact information
+  phoneNumbers        PhoneNumber[]
+  emailAddresses      EmailAddress[]
+  addresses           Address[]
+  socialMediaAccounts SocialMediaAccount[]
+  
+  @@map("companies")
+  @@index([tenantId])
+  @@index([domain])
+  @@index([name])
+  @@index([industryId])
+  @@index([sizeId])
+}
+
+model Contact {
+  id          String   @id @default(cuid())
+  firstName   String
+  lastName    String
+  title       String?
+  department  String?
+  
+  // Company relationship
+  companyId   String?
+  company     Company? @relation(fields: [companyId], references: [id])
+  
+  // Lead source tracking
+  originalSource String?
+  
+  // Communication preferences
+  emailOptIn    Boolean @default(true)
+  smsOptIn      Boolean @default(false)
+  callOptIn     Boolean @default(true)
+  
+  // Multi-tenancy
+  tenantId    String
+  tenant      Tenant   @relation(fields: [tenantId], references: [id])
+  
+  // Audit fields
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  createdBy   String?
+  isDeleted   Boolean  @default(false)
+  deletedAt   DateTime?
+  
+  // Relationships
+  leads               Lead[]
+  deals               Deal[]
+  communications      Communication[]
+  customFieldValues   CustomFieldValue[]
+  activityLogs        ActivityLog[]
+  
+  // Contact information
+  phoneNumbers        PhoneNumber[]
+  emailAddresses      EmailAddress[]
+  addresses           Address[]
+  socialMediaAccounts SocialMediaAccount[]
+  
+  @@map("contacts")
+  @@index([tenantId])
+  @@index([companyId])
+}
+
+// ============================================================================
+// LEADS AND LEAD MANAGEMENT
+// ============================================================================
+
+model Lead {
+  id          String     @id @default(cuid())
+  firstName   String?
+  lastName    String?
+  title       String?
+  
+  // Lead status relationship (extensible)
+  statusId    String?
+  status      LeadStatus? @relation(fields: [statusId], references: [id])
+  
+  // Lead temperature relationship (extensible)
+  temperatureId String?
+  temperature   LeadTemperature? @relation(fields: [temperatureId], references: [id])
+  
+  source      String?
+  campaign    String?
+  score       Int        @default(0)
+  
+  // Company relationship
+  companyId   String?
+  company     Company?   @relation(fields: [companyId], references: [id])
+  
+  // Contact relationship (after conversion)
+  contactId   String?    @unique
+  contact     Contact?   @relation(fields: [contactId], references: [id])
+  
+  // Assignment
+  assignedUserId String?
+  assignedUser   User?   @relation("AssignedUser", fields: [assignedUserId], references: [id])
+  
+  // Marketing attribution
+  marketingSourceId String?
+  marketingSource   MarketingSource? @relation(fields: [marketingSourceId], references: [id])
+  
+  // Conversion tracking
+  convertedAt   DateTime?
+  convertedToDealId String?
+  
+  // Multi-tenancy
+  tenantId    String
+  tenant      Tenant     @relation(fields: [tenantId], references: [id])
+  
+  // Audit fields
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  createdBy   String?
+  isDeleted   Boolean  @default(false)
+  deletedAt   DateTime?
+  
+  // Relationships
+  communications    Communication[]
+  tasks            Task[]
+  customFieldValues CustomFieldValue[]
+  activityLogs     ActivityLog[]
+  
+  // Contact information
+  phoneNumbers        PhoneNumber[]
+  emailAddresses      EmailAddress[]
+  addresses           Address[]
+  socialMediaAccounts SocialMediaAccount[]
+  
+  @@map("leads")
+  @@index([tenantId])
+  @@index([statusId])
+  @@index([temperatureId])
+  @@index([assignedUserId])
+  @@index([score])
+}
+
+// ============================================================================
+// DEALS AND SALES PIPELINE
+// ============================================================================
+
+model Deal {
+  id          String      @id @default(cuid())
+  name        String
+  amount      Decimal?
+  currency    String      @default("USD")
+  probability Int         @default(0) // 0-100
+  
+  // Pipeline and stage
+  pipelineId  String
+  pipeline    Pipeline    @relation(fields: [pipelineId], references: [id])
+  stageId     String
+  stage       Stage       @relation(fields: [stageId], references: [id])
+  
+  // Key dates
+  expectedCloseDate DateTime?
+  actualCloseDate   DateTime?
+  
+  // Relationships
+  companyId   String?
+  company     Company?    @relation(fields: [companyId], references: [id])
+  
+  contactId   String?
+  contact     Contact?    @relation(fields: [contactId], references: [id])
+  
+  assignedUserId String?
+  assignedUser   User?    @relation("AssignedUser", fields: [assignedUserId], references: [id])
+  
+  // Multi-tenancy
+  tenantId    String
+  tenant      Tenant      @relation(fields: [tenantId], references: [id])
+  
+  // Audit fields
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  createdBy   String?
+  isDeleted   Boolean  @default(false)
+  deletedAt   DateTime?
+  
+  // Relationships
+  tasks            Task[]
+  communications   Communication[]
+  customFieldValues CustomFieldValue[]
+  activityLogs     ActivityLog[]
+  stageHistory     DealStageHistory[]
+  
+  @@map("deals")
+  @@index([tenantId])
+  @@index([stageId])
+  @@index([assignedUserId])
+  @@index([expectedCloseDate])
+}
+
+model Pipeline {
+  id       String @id @default(cuid())
+  name     String
+  isActive Boolean @default(true)
+  
+  // Multi-tenancy
+  tenantId String
+  tenant   Tenant @relation(fields: [tenantId], references: [id])
+  
+  // Audit fields
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  // Relationships
+  stages Stage[]
+  deals  Deal[]
+  
+  @@map("pipelines")
+  @@index([tenantId])
+}
+
+model Stage {
+  id          String  @id @default(cuid())
+  name        String
+  order       Int
+  probability Int     @default(0) // Default probability for this stage
+  isClosedWon Boolean @default(false)
+  isClosedLost Boolean @default(false)
+  color       String? // For UI display
+  
+  // Pipeline relationship
+  pipelineId  String
+  pipeline    Pipeline @relation(fields: [pipelineId], references: [id])
+  
+  // Multi-tenancy
+  tenantId    String
+  tenant      Tenant   @relation(fields: [tenantId], references: [id])
+  
+  // Relationships
+  deals           Deal[]
+  stageHistory    DealStageHistory[]
+  
+  @@map("stages")
+  @@index([pipelineId, order])
+}
+
+model DealStageHistory {
+  id       String   @id @default(cuid())
+  dealId   String
+  deal     Deal     @relation(fields: [dealId], references: [id])
+  
+  fromStageId String?
+  fromStage   Stage?  @relation(fields: [fromStageId], references: [id])
+  
+  toStageId   String
+  toStage     Stage   @relation(fields: [toStageId], references: [id], map: "DealStageHistory_toStage")
+  
+  // Track changes to amount and probability for pipeline audits
+  fromAmount      Decimal?
+  toAmount        Decimal?
+  fromProbability Int?
+  toProbability   Int?
+  fromCurrency    String?
+  toCurrency      String?
+  
+  // Track expected close date changes
+  fromExpectedCloseDate DateTime?
+  toExpectedCloseDate   DateTime?
+  
+  // Change metadata
+  changeReason    String? // Why the change was made
+  notes          String? // Additional context
+  
+  movedAt     DateTime @default(now())
+  movedBy     String?
+  
+  @@map("deal_stage_history")
+  @@index([dealId])
+  @@index([movedAt])
+}
+
+// ============================================================================
+// MARKETING SOURCES AND ASSETS
+// ============================================================================
+
+model MarketingSource {
+  id          String @id @default(cuid())
+  name        String
+  
+  // Type relationship (extensible)
+  typeId      String?
+  type        MarketingSourceType? @relation(fields: [typeId], references: [id])
+  
+  medium      String? // email, social, paid, organic, etc.
+  campaign    String?
+  source      String? // google, facebook, linkedin, etc.
+  content     String?
+  term        String? // for paid search
+  
+  // UTM tracking
+  utmSource   String?
+  utmMedium   String?
+  utmCampaign String?
+  utmContent  String?
+  utmTerm     String?
+  
+  // Performance tracking
+  cost        Decimal?
+  impressions Int?
+  clicks      Int?
+  
+  // Multi-tenancy
+  tenantId    String
+  tenant      Tenant @relation(fields: [tenantId], references: [id])
+  
+  // Audit fields
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  isDeleted   Boolean  @default(false)
+  
+  // Relationships
+  leads       Lead[]
+  customFieldValues CustomFieldValue[]
+  
+  @@map("marketing_sources")
+  @@index([tenantId])
+  @@index([typeId])
+}
+
+model MarketingAsset {
+  id          String @id @default(cuid())
+  name        String
+  
+  // Type relationship (extensible)
+  typeId      String?
+  type        MarketingAssetType? @relation(fields: [typeId], references: [id])
+  
+  url         String?
+  content     String? // For email templates, etc.
+  
+  // Performance tracking
+  views       Int @default(0)
+  clicks      Int @default(0)
+  conversions Int @default(0)
+  
+  // Multi-tenancy
+  tenantId    String
+  tenant      Tenant @relation(fields: [tenantId], references: [id])
+  
+  // Audit fields
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  isDeleted   Boolean  @default(false)
+  
+  // Relationships
+  customFieldValues CustomFieldValue[]
+  
+  @@map("marketing_assets")
+  @@index([tenantId])
+  @@index([typeId])
+}
+
+// ============================================================================
+// COMMUNICATIONS AND ACTIVITIES
+// ============================================================================
+
+model Communication {
+  id          String            @id @default(cuid())
+  
+  // Type relationship (extensible)
+  typeId      String?
+  type        CommunicationType? @relation(fields: [typeId], references: [id])
+  
+  subject     String?
+  content     String?
+  direction   CommunicationDirection
+  
+  // Timing
+  scheduledAt DateTime?
+  sentAt      DateTime?
+  receivedAt  DateTime?
+  
+  // External references
+  externalId  String? // For email providers, phone systems, etc.
+  
+  // Relationships
+  userId      String?
+  user        User?     @relation(fields: [userId], references: [id])
+  
+  contactId   String?
+  contact     Contact?  @relation(fields: [contactId], references: [id])
+  
+  leadId      String?
+  lead        Lead?     @relation(fields: [leadId], references: [id])
+  
+  dealId      String?
+  deal        Deal?     @relation(fields: [dealId], references: [id])
+  
+  // Multi-tenancy
+  tenantId    String
+  tenant      Tenant    @relation(fields: [tenantId], references: [id])
+  
+  // Audit fields
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  // Relationships
+  attachments     CommunicationAttachment[]
+  customFieldValues CustomFieldValue[]
+  
+  @@map("communications")
+  @@index([tenantId])
+  @@index([typeId])
+  @@index([contactId])
+  @@index([leadId])
+  @@index([dealId])
+  @@index([scheduledAt])
+}
+
+// Keep this enum as it's a core system concept
+enum CommunicationDirection {
+  INBOUND
+  OUTBOUND
+  INTERNAL
+}
+
+model CommunicationAttachment {
+  id              String        @id @default(cuid())
+  filename        String
+  originalName    String
+  mimeType        String
+  size            Int
+  url             String
+  
+  communicationId String
+  communication   Communication @relation(fields: [communicationId], references: [id])
+  
+  createdAt       DateTime @default(now())
+  
+  @@map("communication_attachments")
+}
+
+// ============================================================================
+// TASKS AND WORKFLOW
+// ============================================================================
+
+model Task {
+  id          String     @id @default(cuid())
+  title       String
+  description String?
+  
+  // Type relationship (extensible)
+  typeId      String?
+  type        TaskType?  @relation(fields: [typeId], references: [id])
+  
+  priority    TaskPriority @default(MEDIUM)
+  status      TaskStatus @default(PENDING)
+  
+  // Timing
+  dueDate     DateTime?
+  completedAt DateTime?
+  
+  // Assignment
+  assignedUserId String?
+  assignedUser   User?   @relation("AssignedUser", fields: [assignedUserId], references: [id])
+  
+  createdBy   String?
+  createdByUser User?  @relation("CreatedBy", fields: [createdBy], references: [id])
+  
+  // Relationships
+  leadId      String?
+  lead        Lead?     @relation(fields: [leadId], references: [id])
+  
+  dealId      String?
+  deal        Deal?     @relation(fields: [dealId], references: [id])
+  
+  // Multi-tenancy
+  tenantId    String
+  tenant      Tenant    @relation(fields: [tenantId], references: [id])
+  
+  // Audit fields
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  // Relationships
+  customFieldValues CustomFieldValue[]
+  
+  @@map("tasks")
+  @@index([tenantId])
+  @@index([typeId])
+  @@index([assignedUserId])
+  @@index([dueDate])
+  @@index([status])
+}
+
+// Keep these enums as they're core workflow concepts
+enum TaskPriority {
+  LOW
+  MEDIUM
+  HIGH
+  URGENT
+}
+
+enum TaskStatus {
+  PENDING
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+  OVERDUE
+}
+
+// ============================================================================
+// TERRITORIES AND ASSIGNMENT
+// ============================================================================
+
+model Territory {
+  id          String @id @default(cuid())
+  name        String
+  
+  // Type relationship (extensible)
+  typeId      String?
+  type        TerritoryType? @relation(fields: [typeId], references: [id])
+  
+  // Geographic boundaries
+  countries   String[] // Array of country codes
+  states      String[] // Array of state codes
+  cities      String[] // Array of cities
+  postalCodes String[] // Array of postal codes
+  
+  // Account-based territories
+  industries  String[] // Array of industries
+  companySize String[] // Array of company sizes
+  
+  // Multi-tenancy
+  tenantId    String
+  tenant      Tenant @relation(fields: [tenantId], references: [id])
+  
+  // Audit fields
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  // Relationships
+  users       User[]
+  
+  @@map("territories")
+  @@index([tenantId])
+  @@index([typeId])
+}
+
+// ============================================================================
+// EXTENSIBILITY FRAMEWORK
+// ============================================================================
+
+model CustomField {
+  id          String           @id @default(cuid())
+  name        String           // Internal name
+  label       String           // Display name
+  type        CustomFieldType
+  entityType  String           // Which entity this field belongs to
+  
+  // Field configuration
+  isRequired  Boolean          @default(false)
+  isUnique    Boolean          @default(false)
+  defaultValue String?
+  
+  // For picklist/select fields
+  options     Json?            // Array of options
+  
+  // For lookup fields
+  lookupEntity String?         // Entity to lookup
+  
+  // Validation rules
+  validation  Json?            // Validation rules and constraints
+  
+  // Multi-tenancy
+  tenantId    String
+  tenant      Tenant           @relation(fields: [tenantId], references: [id])
+  
+  // Audit fields
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  isDeleted   Boolean  @default(false)
+  
+  // Relationships
+  values      CustomFieldValue[]
+  
+  @@map("custom_fields")
+  @@index([tenantId])
+  @@index([entityType])
+  @@unique([tenantId, entityType, name])
+}
+
+// Keep this enum as it defines core data types
+enum CustomFieldType {
+  TEXT
+  TEXTAREA
+  NUMBER
+  DECIMAL
+  BOOLEAN
+  DATE
+  DATETIME
+  EMAIL
+  URL
+  PHONE
+  PICKLIST
+  MULTI_PICKLIST
+  LOOKUP
+  JSON
+}
+
+model CustomFieldValue {
+  id        String      @id @default(cuid())
+  fieldId   String
+  field     CustomField @relation(fields: [fieldId], references: [id])
+  
+  entityId  String      // ID of the record this value belongs to
+  entityType String     // Type of entity (Company, Contact, etc.)
+  
+  // Value storage (use appropriate field based on type)
+  textValue    String?
+  numberValue  Int?
+  decimalValue Decimal?
+  booleanValue Boolean?
+  dateValue    DateTime?
+  jsonValue    Json?
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  // Polymorphic relationships
+  company         Company?         @relation(fields: [entityId], references: [id])
+  contact         Contact?         @relation(fields: [entityId], references: [id])
+  lead            Lead?            @relation(fields: [entityId], references: [id])
+  deal            Deal?            @relation(fields: [entityId], references: [id])
+  task            Task?            @relation(fields: [entityId], references: [id])
+  communication   Communication?   @relation(fields: [entityId], references: [id])
+  marketingSource MarketingSource? @relation(fields: [entityId], references: [id])
+  marketingAsset  MarketingAsset?  @relation(fields: [entityId], references: [id])
+  
+  @@map("custom_field_values")
+  @@index([fieldId])
+  @@index([entityId, entityType])
+  @@unique([fieldId, entityId])
+}
+
+model CustomObject {
+  id          String @id @default(cuid())
+  name        String // Internal name
+  label       String // Display name
+  pluralLabel String // Plural display name
+  
+  // Multi-tenancy
+  tenantId    String
+  tenant      Tenant @relation(fields: [tenantId], references: [id])
+  
+  // Audit fields
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  isDeleted   Boolean  @default(false)
+  
+  @@map("custom_objects")
+  @@index([tenantId])
+  @@unique([tenantId, name])
+}
+
+// ============================================================================
+// ACTIVITY LOGGING AND AUDIT TRAIL
+// ============================================================================
+
+model ActivityLog {
+  id         String   @id @default(cuid())
+  entityType String   // Type of entity that was modified
+  entityId   String   // ID of the entity that was modified
+  action     String   // CREATE, UPDATE, DELETE, etc.
+  
+  // Change details
+  fieldName  String?  // Which field was changed (for updates)
+  oldValue   String?  // Previous value
+  newValue   String?  // New value
+  
+  // Context
+  userId     String?
+  user       User?    @relation(fields: [userId], references: [id])
+  ipAddress  String?
+  userAgent  String?
+  
+  createdAt  DateTime @default(now())
+  
+  // Polymorphic relationships to all entities
+  company         Company? @relation(fields: [entityId], references: [id])
+  contact         Contact? @relation(fields: [entityId], references: [id])
+  lead            Lead?    @relation(fields: [entityId], references: [id])
+  deal            Deal?    @relation(fields: [entityId], references: [id])
+  
+  @@map("activity_logs")
+  @@index([entityType, entityId])
+  @@index([userId])
+  @@index([createdAt])
+}
+  

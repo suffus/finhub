@@ -1,0 +1,215 @@
+history_id,deal_id,stage,value,probability,changed_date,user_id,notes
+1,1,Discovery,180000,60,2024-02-12,1,Initial discovery meeting completed
+2,1,Qualification,185000,65,2024-03-15,1,Requirements gathering phase
+3,1,Proposal,195000,75,2024-04-20,1,Proposal submitted to stakeholders
+4,1,Negotiation,200000,85,2024-06-01,1,Contract terms under discussion
+5,2,Discovery,140000,70,2024-02-22,5,Initial client meeting
+6,2,Qualification,145000,75,2024-03-28,5,Technical requirements defined
+7,2,Proposal,148000,85,2024-05-10,5,Formal proposal presented
+8,2,Negotiation,150000,90,2024-06-15,5,Final pricing negotiations
+9,3,Discovery,75000,65,2024-03-03,3,Educational needs assessment
+10,3,Qualification,80000,70,2024-04-05,3,Platform requirements confirmed
+11,3,Proposal,85000,80,2024-05-20,3,Implementation plan approved
+12,4,Discovery,120000,70,2024-03-22,2,Research platform evaluation
+13,4,Qualification,125000,75,2024-04-25,2,Technical specifications review
+14,4,Proposal,130000,85,2024-06-10,2,Proposal under committee review
+15,5,Discovery,155000,75,2024-04-01,1,CRM requirements analysis
+16,5,Qualification,160000,80,2024-05-05,1,System integration planning
+17,5,Proposal,165000,85,2024-06-20,1,Proposal approved by board
+18,5,Negotiation,170000,88,2024-07-15,1,Contract negotiations started
+19,6,Discovery,60000,70,2024-04-20,3,Analytics requirements review
+20,6,Qualification,62000,75,2024-05-25,3,Dashboard specifications finalized
+21,6,Proposal,65000,82,2024-07-10,3,Final proposal presentation
+22,7,Discovery,115000,75,2024-05-10,2,Legal tech assessment
+23,7,Qualification,120000,80,2024-06-15,2,Document management review
+24,7,Proposal,125000,87,2024-07-20,2,Implementation timeline agreed
+25,8,Discovery,175000,80,2024-05-20,1,Construction tech evaluation
+26,8,Qualification,180000,85,2024-06-25,1,Project tracking requirements
+27,8,Proposal,185000,88,2024-07-30,1,Proposal approved
+28,8,Negotiation,190000,91,2024-08-04,1,Final contract terms
+29,9,Discovery,135000,75,2024-05-30,5,Pharmaceutical compliance review
+30,9,Qualification,140000,80,2024-07-05,5,Regulatory requirements analysis
+31,9,Proposal,145000,84,2024-08-10,5,Compliance solution proposed
+32,10,Discovery,110000,80,2024-06-18,4,Smart home automation assessment
+33,10,Qualification,115000,85,2024-07-25,4,IoT integration planning
+34,10,Proposal,120000,86,2024-08-15,4,Final automation proposal
+35,11,Discovery,95000,75,2024-07-08,1,Game development tools review
+36,11,Qualification,98000,80,2024-08-05,1,Development workflow analysis
+37,11,Proposal,100000,83,2024-08-14,1,Tools integration proposal
+38,12,Discovery,125000,80,2024-07-18,5,VR training needs assessment
+39,12,Qualification,130000,85,2024-08-10,5,Training platform specifications
+40,12,Negotiation,135000,89,2024-08-03,5,Pricing and terms discussion
+41,13,Discovery,115000,75,2024-07-28,3,IoT device management review
+42,13,Qualification,120000,80,2024-08-15,3,Device connectivity requirements
+43,13,Proposal,125000,81,2024-08-12,3,Management platform proposal
+44,14,Discovery,185000,80,2024-08-14,2,Quantum computing evaluation
+45,14,Proposal,200000,88,2024-08-12,2,Quantum platform proposal
+46,15,Discovery,105000,75,2024-02-15,5,Ocean monitoring needs analysis
+47,15,Qualification,110000,80,2024-04-10,5,Marine platform requirements
+48,15,Proposal,115000,85,2024-06-25,5,Monitoring solution proposal
+49,16,Discovery,145000,85,2024-02-25,3,Urban planning assessment
+50,16,Qualification,150000,90,2024-04-15,3,Smart city requirements
+51,16,Negotiation,155000,92,2024-06-20,3,Implementation contract
+52,17,Discovery,165000,80,2024-03-08,4,Future tech research evaluation
+53,17,Qualification,170000,85,2024-05-10,4,Research platform specifications
+54,17,Proposal,175000,87,2024-07-15,4,Innovation platform proposal
+55,18,Discovery,155000,75,2024-04-01,1,Healthcare IT assessment
+56,18,Qualification,160000,80,2024-05-20,1,Infrastructure requirements
+57,18,Proposal,165000,84,2024-07-25,1,IT infrastructure proposal
+58,19,Discovery,130000,85,2024-04-15,5,Risk management evaluation
+59,19,Qualification,135000,88,2024-06-10,5,Risk system requirements
+60,19,Negotiation,140000,90,2024-07-30,5,Risk management contract
+61,20,Discovery,80000,80,2024-05-13,4,Fleet management assessment
+62,20,Qualification,83000,85,2024-07-05,4,Transportation requirements
+63,20,Proposal,85000,86,2024-08-11,4,Fleet optimization proposal
+64,21,Discovery,135000,80,2024-06-10,1,Property management evaluation
+65,21,Qualification,140000,85,2024-07-20,1,Real estate system requirements
+66,21,Proposal,145000,88,2024-08-12,1,Property management proposal
+67,22,Discovery,75000,85,2024-06-24,5,Customer experience assessment
+68,22,Qualification,78000,88,2024-08-01,5,Experience platform requirements
+69,22,Negotiation,80000,91,2024-08-05,5,Customer experience contract
+70,23,Discovery,55000,75,2024-07-22,4,Non-profit management evaluation
+71,23,Qualification,58000,80,2024-08-10,4,Development system requirements
+72,23,Proposal,60000,83,2024-08-14,4,Management platform proposal
+73,24,Discovery,120000,80,2024-01-18,1,Safety management assessment
+74,24,Qualification,125000,85,2024-03-15,1,Construction safety requirements
+75,24,Proposal,130000,85,2024-05-20,1,Safety system proposal
+76,25,Discovery,155000,80,2024-02-01,5,Clinical trial evaluation
+77,25,Qualification,160000,85,2024-04-05,5,Trial platform requirements
+78,25,Negotiation,165000,89,2024-06-15,5,Clinical platform contract
+79,26,Discovery,130000,80,2024-03-01,4,Home automation assessment
+80,26,Qualification,135000,85,2024-05-10,4,Smart home requirements
+81,26,Proposal,140000,87,2024-07-20,4,Automation platform proposal
+82,27,Discovery,110000,75,2024-03-29,1,Game studio evaluation
+83,27,Qualification,115000,80,2024-06-05,1,Studio management requirements
+84,27,Proposal,120000,84,2024-08-03,1,Studio platform proposal
+85,28,Discovery,145000,85,2024-04-12,5,VR development assessment
+86,28,Qualification,150000,88,2024-06-20,5,Development platform requirements
+87,28,Negotiation,155000,90,2024-08-07,5,VR development contract
+88,29,Discovery,105000,80,2024-05-10,4,Automation control evaluation
+89,29,Qualification,110000,85,2024-07-15,4,Robotics control requirements
+90,29,Proposal,115000,86,2024-08-08,4,Control system proposal
+91,30,Discovery,195000,85,2024-05-24,2,Quantum development assessment
+92,30,Qualification,205000,90,2024-07-10,2,Development tools requirements
+93,30,Negotiation,210000,93,2024-08-02,2,Quantum tools contract
+94,31,Discovery,115000,80,2024-06-21,5,Marine research evaluation
+95,31,Qualification,120000,85,2024-08-05,5,Research platform requirements
+96,31,Proposal,125000,85,2024-08-13,5,Marine platform proposal
+97,32,Discovery,150000,85,2024-07-05,3,Smart city assessment
+98,32,Qualification,155000,90,2024-08-15,3,City platform requirements
+99,32,Negotiation,160000,92,2024-08-10,3,Smart city contract
+100,33,Discovery,175000,80,2024-07-19,4,Future tech evaluation
+101,33,Qualification,180000,85,2024-08-20,4,Research platform requirements
+102,33,Proposal,185000,88,2024-08-14,4,Future tech proposal
+103,34,Discovery,110000,70,2024-02-05,3,Analytics platform evaluation
+104,34,Qualification,115000,80,2024-03-20,3,Data platform requirements
+105,34,Proposal,118000,90,2024-05-15,3,Analytics solution proposal
+106,34,Closed Won,120000,100,2024-07-15,3,Contract signed and executed
+107,35,Discovery,165000,75,2024-02-28,2,Manufacturing automation assessment
+108,35,Qualification,170000,85,2024-04-10,2,Automation requirements
+109,35,Proposal,175000,90,2024-05-25,2,Manufacturing solution proposal
+110,35,Closed Won,180000,100,2024-06-30,2,Implementation contract signed
+111,36,Discovery,105000,70,2024-04-05,4,Media platform evaluation
+112,36,Qualification,110000,80,2024-05-20,4,Platform enhancement requirements
+113,36,Proposal,112000,90,2024-06-25,4,Media enhancement proposal
+114,36,Closed Won,115000,100,2024-07-20,4,Enhancement contract executed
+115,37,Discovery,100000,75,2024-03-08,1,Cloud migration assessment
+116,37,Qualification,105000,85,2024-04-25,1,Migration requirements
+117,37,Proposal,108000,90,2024-05-30,1,Cloud migration proposal
+118,37,Closed Won,110000,100,2024-06-25,1,Migration project approved
+119,38,Discovery,95000,70,2024-05-05,5,Insurance automation evaluation
+120,38,Qualification,100000,80,2024-06-10,5,Automation requirements
+121,38,Proposal,103000,90,2024-06-20,5,Insurance solution proposal
+122,38,Closed Won,105000,100,2024-07-10,5,Automation contract finalized
+123,39,Discovery,85000,60,2024-02-18,4,Retail POS evaluation
+124,39,Qualification,88000,70,2024-04-05,4,POS integration requirements
+125,39,Proposal,90000,80,2024-05-20,4,POS solution proposal
+126,39,Closed Lost,90000,0,2024-06-15,4,Client chose competitor solution
+127,40,Discovery,90000,65,2024-03-18,5,Security audit assessment
+128,40,Qualification,93000,75,2024-05-01,5,Cybersecurity requirements
+129,40,Proposal,95000,85,2024-06-05,5,Security audit proposal
+130,40,Closed Lost,95000,0,2024-07-05,5,Budget constraints led to cancellation
+131,41,Discovery,75000,60,2024-04-15,2,Food safety evaluation
+132,41,Qualification,78000,70,2024-05-25,2,Safety tracking requirements
+133,41,Proposal,80000,80,2024-06-10,2,Food safety proposal
+134,41,Closed Lost,80000,0,2024-06-20,2,Internal solution chosen instead
+135,42,Discovery,150000,70,2024-05-15,3,Project management evaluation
+136,42,Qualification,155000,80,2024-06-20,3,Consulting platform requirements
+137,42,Proposal,160000,85,2024-07-15,3,Project management proposal
+138,42,Closed Lost,160000,0,2024-07-25,3,Contract terms could not be agreed
+139,43,Discovery,75000,71,2024-06-12,1,Wellness platform initial assessment
+140,44,Discovery,90000,69,2024-07-12,4,Drone fleet initial evaluation
+141,45,Discovery,180000,77,2024-08-01,1,AI research platform assessment
+142,46,Discovery,80000,66,2024-01-30,3,Nanotechnology lab evaluation
+143,47,Discovery,50000,57,2024-03-02,1,Rural connectivity assessment
+144,48,Discovery,130000,73,2024-03-25,2,Sales analytics platform evaluation
+145,49,Discovery,105000,72,2024-05-06,1,Customer success platform assessment
+146,50,Discovery,150000,78,2024-08-12,3,Consulting resource platform evaluation
+147,51,Discovery,260000,65,2024-01-12,6,中科创新 enterprise platform evaluation
+148,51,Qualification,270000,70,2024-02-20,6,Innovation platform requirements analysis
+149,51,Proposal,275000,75,2024-04-15,6,Enterprise solution proposal submitted
+150,51,Negotiation,280000,75,2024-06-10,6,Contract terms under discussion
+151,52,Discovery,420000,75,2024-01-18,7,华为数字 digital transformation assessment
+152,52,Qualification,435000,80,2024-03-05,7,Digital solution requirements defined
+153,52,Proposal,450000,85,2024-05-20,7,Transformation proposal approved
+154,53,Discovery,360000,70,2024-02-08,8,阿里巴巴 B2B platform evaluation
+155,53,Qualification,370000,75,2024-03-25,8,Platform integration requirements
+156,53,Proposal,380000,80,2024-06-15,8,B2B integration proposal submitted
+157,54,Discovery,290000,80,2024-02-20,6,百度智能云 AI analytics assessment
+158,54,Qualification,300000,85,2024-04-10,6,AI platform requirements confirmed
+159,54,Negotiation,310000,90,2024-06-25,6,AI analytics contract negotiations
+160,55,Discovery,240000,60,2024-02-25,7,金蝶 ERP solution evaluation
+161,55,Qualification,250000,65,2024-04-20,7,ERP requirements gathering
+162,55,Proposal,260000,70,2024-07-05,7,Software solution proposal
+163,56,Discovery,220000,75,2024-03-02,8,用友网络 business platform assessment
+164,56,Qualification,230000,80,2024-05-15,8,Management platform specifications
+165,56,Proposal,240000,82,2024-07-30,8,Business platform proposal
+166,57,Discovery,180000,60,2024-03-08,6,海康威视 security system evaluation
+167,57,Qualification,190000,65,2024-05-20,6,Security upgrade requirements
+168,57,Proposal,200000,68,2024-07-25,6,Security solution proposal
+169,58,Discovery,165000,75,2024-03-15,7,大华技术 surveillance platform assessment
+170,58,Qualification,170000,80,2024-06-01,7,Video platform requirements
+171,58,Proposal,180000,84,2024-08-05,7,Surveillance solution proposal
+172,59,Discovery,200000,65,2024-03-20,8,科大讯飞 speech AI evaluation
+173,59,Qualification,210000,70,2024-06-10,8,AI integration requirements
+174,59,Proposal,220000,72,2024-08-01,8,Speech AI solution proposal
+175,60,Discovery,320000,80,2024-03-25,6,比亚迪 automotive tech assessment
+176,60,Qualification,335000,85,2024-06-15,6,Automotive platform requirements
+177,60,Proposal,350000,86,2024-08-08,6,Automotive tech proposal
+178,61,Discovery,280000,65,2024-04-01,7,宁德时代 battery management evaluation
+179,61,Qualification,290000,70,2024-06-20,7,Battery system requirements
+180,61,Proposal,300000,74,2024-08-12,7,Battery management proposal
+181,62,Discovery,380000,80,2024-04-08,8,三一重工 heavy machinery assessment
+182,62,Qualification,400000,85,2024-06-25,8,IoT machinery requirements
+183,62,Negotiation,420000,88,2024-08-05,8,Heavy machinery contract negotiations
+184,63,Discovery,350000,70,2024-04-15,6,徐工集团 construction equipment evaluation
+185,63,Qualification,365000,75,2024-07-01,6,Equipment platform requirements
+186,63,Proposal,380000,76,2024-08-10,6,Construction platform proposal
+187,64,Discovery,230000,75,2024-04-20,7,美的集团 smart appliance assessment
+188,64,Qualification,240000,80,2024-07-05,7,Smart platform requirements
+189,64,Proposal,250000,83,2024-08-06,7,Appliance platform proposal
+190,65,Discovery,210000,65,2024-04-25,8,格力电器 HVAC control evaluation
+191,65,Qualification,220000,70,2024-07-10,8,HVAC system requirements
+192,65,Proposal,230000,71,2024-08-09,8,Control system proposal
+193,66,Discovery,260000,80,2024-05-01,6,京东物流 logistics optimization assessment
+194,66,Qualification,270000,85,2024-07-20,6,Logistics platform requirements
+195,66,Proposal,280000,85,2024-08-07,6,Optimization platform proposal
+196,67,Discovery,240000,65,2024-05-08,7,顺丰速运 express delivery evaluation
+197,67,Qualification,250000,70,2024-07-25,7,Delivery tech requirements
+198,67,Proposal,260000,73,2024-08-13,7,Express technology proposal
+199,68,Discovery,170000,80,2024-05-15,8,新东方 education platform assessment
+200,68,Qualification,180000,85,2024-07-30,8,Education upgrade requirements
+201,68,Negotiation,190000,89,2024-08-03,8,Education platform negotiations
+202,69,Discovery,190000,70,2024-05-20,6,好未来 online education evaluation
+203,69,Qualification,200000,75,2024-08-01,6,Online platform requirements
+204,69,Proposal,210000,77,2024-08-11,6,Education platform proposal
+205,70,Discovery,280000,69,2024-06-15,7,腾讯云 cloud migration assessment
+206,71,Discovery,300000,66,2024-06-20,8,阿里巴巴 e-commerce platform evaluation
+207,72,Discovery,200000,75,2024-06-25,6,金蝶 financial software assessment
+208,72,Qualification,210000,80,2024-08-10,6,Financial upgrade requirements
+209,72,Proposal,220000,81,2024-08-12,6,Software upgrade proposal
+210,73,Discovery,240000,65,2024-07-01,7,海康威视 security analytics evaluation
+211,74,Discovery,180000,70,2024-07-08,8,科大讯飞 voice recognition assessment
+212,74,Qualification,190000,75,2024-08-15,8,Voice system requirements
+213,74,Proposal,200000,78,2024-08-11,8,Recognition system proposal
+214,75,Discovery,190000,62,2024-07-15,6,美的集团 IoT home solutions evaluation

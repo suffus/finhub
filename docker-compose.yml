@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:17-alpine
+    container_name: finhub-postgres
+    environment:
+      POSTGRES_DB: finhub
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - finhub-network
+
+  backend:
+    build: ./backend
+    container_name: finhub-backend
+    environment:
+      DATABASE_URL: postgres://postgres:password@postgres:5432/finhub?sslmode=disable
+      JWT_SECRET: your-secret-key-change-in-production
+      DEBUG: true
+      PORT: 8080
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+    networks:
+      - finhub-network
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    container_name: finhub-frontend
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:8080
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - finhub-network
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+
+networks:
+  finhub-network:
+    driver: bridge 

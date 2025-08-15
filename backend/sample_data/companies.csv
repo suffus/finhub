@@ -1,0 +1,71 @@
+company_id,company_name,industry,company_size,website,phone,address,city,state,zip_code,country
+1,TechFlow Solutions,Technology,250,www.techflowsolutions.com,555-0101,123 Innovation Dr,San Francisco,CA,94105,USA
+2,GreenEnergy Corp,Energy,500,www.greenenergycorp.com,555-0102,456 Renewable Blvd,Austin,TX,73301,USA
+3,DataMind Analytics,Data & Analytics,150,www.datamindanalytics.com,555-0103,789 Analytics Ave,Seattle,WA,98101,USA
+4,HealthFirst Systems,Healthcare,1200,www.healthfirstsys.com,555-0104,321 Medical Plaza,Boston,MA,02101,USA
+5,RetailMax Inc,Retail,800,www.retailmaxinc.com,555-0105,654 Commerce St,Chicago,IL,60601,USA
+6,FinanceFlow,Financial Services,350,www.financeflow.com,555-0106,987 Banking Blvd,New York,NY,10001,USA
+7,ManufacturePro,Manufacturing,600,www.manufacturepro.com,555-0107,147 Industrial Way,Detroit,MI,48201,USA
+8,EduTech Solutions,Education Technology,200,www.edutechsol.com,555-0108,258 Learning Lane,Denver,CO,80201,USA
+9,CloudFirst Systems,Cloud Services,300,www.cloudfirstsys.com,555-0109,369 Cloud Dr,Portland,OR,97201,USA
+10,LogiTransport,Transportation & Logistics,450,www.logitransport.com,555-0110,741 Shipping Ave,Miami,FL,33101,USA
+11,SecureGuard IT,Cybersecurity,180,www.secureguard.com,555-0111,852 Security Blvd,Phoenix,AZ,85001,USA
+12,BioTech Innovations,Biotechnology,120,www.biotechinno.com,555-0112,963 Science Park,San Diego,CA,92101,USA
+13,AgriSmart Systems,Agriculture Technology,90,www.agrismarttech.com,555-0113,159 Farm Tech Rd,Des Moines,IA,50301,USA
+14,RealEstate Plus,Real Estate,220,www.realestateplus.com,555-0114,267 Property Ave,Las Vegas,NV,89101,USA
+15,MediaStream Corp,Media & Entertainment,400,www.mediastreamcorp.com,555-0115,378 Entertainment Blvd,Los Angeles,CA,90001,USA
+16,TravelEase Inc,Travel & Tourism,160,www.travelease.com,555-0116,486 Journey St,Orlando,FL,32801,USA
+17,FoodTech Solutions,Food Technology,130,www.foodtechsol.com,555-0117,597 Culinary Way,Portland,ME,04101,USA
+18,SportsTech Pro,Sports Technology,110,www.sportstechpro.com,555-0118,615 Athletic Ave,Minneapolis,MN,55401,USA
+19,AutoInnovate,Automotive Technology,280,www.autoinnovate.com,555-0119,726 Motor Pkwy,Nashville,TN,37201,USA
+20,NonProfit Connect,Non-Profit Technology,75,www.nonprofitconnect.org,555-0120,837 Service St,Washington,DC,20001,USA
+21,InsureTech Plus,Insurance Technology,190,www.insuretechplus.com,555-0121,948 Coverage Blvd,Hartford,CT,06101,USA
+22,LegalTech Systems,Legal Technology,140,www.legaltechsys.com,555-0122,156 Justice Ave,Atlanta,GA,30301,USA
+23,ConsultPro Services,Professional Services,320,www.consultproservices.com,555-0123,267 Advisory St,Dallas,TX,75201,USA
+24,BuildTech Solutions,Construction Technology,240,www.buildtechsol.com,555-0124,378 Construction Ave,Phoenix,AZ,85001,USA
+25,CleanEnergy Systems,Renewable Energy,170,www.cleanenergysys.com,555-0125,489 Solar Blvd,Sacramento,CA,95814,USA
+26,PharmaConnect,Pharmaceutical,380,www.pharmaconnect.com,555-0126,591 Medicine Dr,Philadelphia,PA,19101,USA
+27,TechStartup Hub,Technology Incubator,50,www.techstartuphub.com,555-0127,612 Innovation St,Raleigh,NC,27601,USA
+28,GlobalTrade Corp,International Trade,290,www.globaltradecorp.com,555-0128,723 Commerce Blvd,Long Beach,CA,90801,USA
+29,WellnessTech Inc,Health & Wellness,160,www.wellnesstech.com,555-0129,834 Wellness Way,Boulder,CO,80301,USA
+30,SmartHome Systems,Home Automation,210,www.smarthomesys.com,555-0130,945 Automation Ave,Salt Lake City,UT,84101,USA
+31,EventTech Pro,Event Technology,95,www.eventtechpro.com,555-0131,156 Event Plaza,San Antonio,TX,78201,USA
+32,FashionTech Solutions,Fashion Technology,85,www.fashiontechsol.com,555-0132,267 Style St,New York,NY,10001,USA
+33,PetTech Innovations,Pet Technology,70,www.pettechinno.com,555-0133,378 Pet Park Ave,Portland,OR,97201,USA
+34,GameDev Studios,Game Development,180,www.gamedevstudios.com,555-0134,489 Gaming Blvd,Austin,TX,73301,USA
+35,DroneFlow Systems,Drone Technology,100,www.droneflowsys.com,555-0135,591 Aerial Way,Colorado Springs,CO,80901,USA
+36,VR Innovations,Virtual Reality,120,www.vrinnovations.com,555-0136,612 Virtual St,San Jose,CA,95101,USA
+37,BlockChain Pro,Blockchain Technology,150,www.blockchainpro.com,555-0137,723 Crypto Ave,Miami,FL,33101,USA
+38,IoT Solutions Plus,Internet of Things,200,www.iotsolutionsplus.com,555-0138,834 Connected Blvd,Seattle,WA,98101,USA
+39,AI Research Corp,Artificial Intelligence,250,www.airesearchcorp.com,555-0139,945 Neural Network Dr,Boston,MA,02101,USA
+40,RoboTech Systems,Robotics,180,www.robotechsys.com,555-0140,156 Robotics Rd,Pittsburgh,PA,15201,USA
+41,SpaceTech Ventures,Space Technology,90,www.spacetechventures.com,555-0141,267 Cosmos Way,Houston,TX,77001,USA
+42,QuantumFlow,Quantum Computing,80,www.quantumflow.com,555-0142,378 Quantum St,Palo Alto,CA,94301,USA
+43,NanoTech Solutions,Nanotechnology,110,www.nanotechsol.com,555-0143,489 Molecular Ave,Research Triangle Park,NC,27709,USA
+44,GeoTech Systems,Geographic Technology,140,www.geotechsys.com,555-0144,591 Mapping Blvd,Denver,CO,80201,USA
+45,WeatherTech Pro,Weather Technology,60,www.weathertechpro.com,555-0145,612 Climate Way,Oklahoma City,OK,73101,USA
+46,OceanTech Inc,Ocean Technology,85,www.oceantech.com,555-0146,723 Marine Ave,San Diego,CA,92101,USA
+47,MountainTech Systems,Outdoor Technology,75,www.mountaintechsys.com,555-0147,834 Summit St,Denver,CO,80201,USA
+48,UrbanTech Solutions,Urban Planning Technology,130,www.urbantechsol.com,555-0148,945 City Planning Blvd,San Francisco,CA,94105,USA
+49,RuralTech Connect,Rural Technology,55,www.ruraltechconnect.com,555-0149,156 Country Rd,Omaha,NE,68101,USA
+50,FutureTech Innovations,Emerging Technology,200,www.futuretechinno.com,555-0150,267 Tomorrow Ave,Cambridge,MA,02139,USA
+51,中科创新科技,Technology,800,www.zktech.com.cn,+86-10-8888-1001,中关村科技园区创新大厦,Beijing,,100080,China
+52,华为数字解决方案,Digital Solutions,2500,www.huawei-digital.cn,+86-755-2878-8888,深圳市南山区华为总部,Shenzhen,Guangdong,518129,China
+53,腾讯云计算,Cloud Computing,1200,www.qcloud.com,+86-755-8601-3388,深圳市南山区腾讯大厦,Shenzhen,Guangdong,518057,China
+54,阿里巴巴企业服务,Enterprise Services,3000,www.alibaba-b2b.com,+86-571-8502-2088,杭州市余杭区阿里巴巴西溪园区,Hangzhou,Zhejiang,311121,China
+55,百度智能云,AI & Cloud,900,www.cloud.baidu.com,+86-10-5992-8888,北京市海淀区百度科技园,Beijing,,100193,China
+56,金蝶软件,Enterprise Software,650,www.kingdee.com,+86-755-2665-8888,深圳市南山区金蝶软件园,Shenzhen,Guangdong,518057,China
+57,用友网络,Business Software,750,www.yonyou.com,+86-10-6243-7777,北京市海淀区用友软件园,Beijing,,100094,China
+58,海康威视,Security Technology,450,www.hikvision.com,+86-571-8700-8888,杭州市滨江区海康威视科技园,Hangzhou,Zhejiang,310051,China
+59,大华技术,Video Surveillance,380,www.dahuatech.com,+86-571-8768-8883,杭州市滨江区大华科技园,Hangzhou,Zhejiang,310053,China
+60,科大讯飞,AI & Speech Technology,520,www.iflytek.com,+86-551-6536-9000,合肥市高新区科大讯飞总部,Hefei,Anhui,230088,China
+61,比亚迪汽车,Automotive Technology,2800,www.byd.com,+86-755-8988-8888,深圳市坪山区比亚迪总部,Shenzhen,Guangdong,518118,China
+62,宁德时代,Battery Technology,1100,www.catl.com,+86-593-885-9999,宁德市蕉城区时代大道,Ningde,Fujian,352100,China
+63,三一重工,Heavy Machinery,650,www.sany.com.cn,+86-731-8892-3293,长沙市经开区三一工业城,Changsha,Hunan,410100,China
+64,徐工集团,Construction Machinery,780,www.xcmg.com,+86-516-8773-6666,徐州市经开区徐工大道,Xuzhou,Jiangsu,221004,China
+65,美的集团,Home Appliances,1500,www.midea.com,+86-757-2632-2632,佛山市北滘镇美的总部,Foshan,Guangdong,528311,China
+66,格力电器,Air Conditioning,900,www.gree.com,+86-756-861-9999,珠海市前山格力电器总部,Zhuhai,Guangdong,519070,China
+67,京东物流,Logistics Technology,320,www.jdl.cn,+86-10-8912-0000,北京市大兴区京东总部,Beijing,,101111,China
+68,顺丰速运,Express Delivery,480,www.sf-express.com,+86-755-8334-8888,深圳市福田区顺丰总部,Shenzhen,Guangdong,518048,China
+69,新东方教育,Education Technology,280,www.xdf.cn,+86-10-6260-5588,北京市海淀区新东方大厦,Beijing,,100080,China
+70,好未来教育,Online Education,350,www.100tal.com,+86-10-5292-6950,北京市海淀区好未来总部,Beijing,,100080,China

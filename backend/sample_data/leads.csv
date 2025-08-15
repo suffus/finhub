@@ -1,0 +1,131 @@
+lead_id,first_name,last_name,email,phone,company_name,contact_id,user_id,source,status,created_date,last_activity_date,estimated_value,probability,notes
+1,John,Smith,john.smith@techflowsolutions.com,555-1001,TechFlow Solutions,1,1,Website,Qualified,2024-01-15,2024-08-10,75000,80,Interested in enterprise solution - converted to contact
+2,Mike,Johnson,mike.j@greenenergy.com,555-2001,GreenEnergy Corp,,,Cold Call,New,2024-01-25,2024-01-25,45000,20,Initial interest in energy solutions
+3,James,Wilson,james.wilson@datamindanalytics.com,555-1005,DataMind Analytics,5,3,Referral,Qualified,2024-02-05,2024-08-08,120000,70,Data analytics platform upgrade - converted to contact
+4,Dr. William,Anderson,william.anderson@healthfirstsys.com,555-1007,HealthFirst Systems,7,1,Conference,Proposal,2024-02-12,2024-08-01,200000,85,Healthcare compliance solution - converted to contact
+5,Sarah,Miller,s.miller@retailtech.com,555-2002,RetailTech Solutions,,,LinkedIn,New,2024-02-18,2024-02-18,90000,25,Retail POS inquiry
+6,David,White,david.white@financeflow.com,555-1011,FinanceFlow,11,5,Email Campaign,Negotiation,2024-02-22,2024-08-09,150000,90,Financial reporting software - converted to contact
+7,Richard,Martin,richard.martin@manufacturepro.com,555-1013,ManufacturePro,13,2,Trade Show,Qualified,2024-02-28,2024-08-07,180000,75,Manufacturing automation - converted to contact
+8,Charles,Garcia,charles.garcia@edutechsol.com,555-1015,EduTech Solutions,15,3,Website,Proposal,2024-03-03,2024-08-15,85000,80,Educational platform expansion - converted to contact
+9,Joseph,Robinson,joseph.robinson@cloudfirstsys.com,555-1017,CloudFirst Systems,17,1,Referral,Qualified,2024-03-08,2024-08-12,110000,65,Cloud migration services - converted to contact
+10,Lisa,Chen,lisa.chen@logicorp.com,555-2003,LogiCorp,,,Cold Call,Nurturing,2024-03-12,2024-07-14,70000,35,Logistics software interest
+11,Christopher,Lee,christopher.lee@secureguard.com,555-1021,SecureGuard IT,21,5,Conference,Qualified,2024-03-18,2024-08-10,95000,70,Cybersecurity audit - converted to contact
+12,Daniel,Hall,daniel.hall@biotechinno.com,555-1023,BioTech Innovations,23,2,Website,Proposal,2024-03-22,2024-08-13,130000,85,Biotech research platform - converted to contact
+13,Paul,Young,paul.young@agrismarttech.com,555-1025,AgriSmart Systems,25,3,LinkedIn,Qualified,2024-03-28,2024-08-09,60000,55,Agricultural IoT sensors - converted to contact
+14,Mark,King,mark.king@realestateplus.com,555-1027,RealEstate Plus,27,1,Referral,Negotiation,2024-04-01,2024-08-12,170000,88,Real estate CRM system - converted to contact
+15,Steven,Lopez,steven.lopez@mediastreamcorp.com,555-1029,MediaStream Corp,29,4,Email Campaign,Qualified,2024-04-05,2024-08-15,115000,72,Media streaming platform - converted to contact
+16,Amanda,Davis,amanda.d@traveltech.com,555-2004,TravelTech Inc,,,Trade Show,New,2024-04-10,2024-04-10,55000,20,Travel platform inquiry
+17,Edward,Adams,edward.adams@foodtechsol.com,555-1033,FoodTech Solutions,33,2,Cold Call,Qualified,2024-04-15,2024-08-14,80000,68,Food safety tracking - converted to contact
+18,Brian,Gonzalez,brian.gonzalez@sportstechpro.com,555-1035,SportsTech Pro,35,3,Website,Proposal,2024-04-20,2024-08-10,65000,82,Sports analytics dashboard - converted to contact
+19,Ronald,Carter,ronald.carter@autoinnovate.com,555-1037,AutoInnovate,37,1,Conference,Qualified,2024-04-25,2024-08-07,140000,76,Automotive testing platform - converted to contact
+20,Jennifer,Wilson,j.wilson@nonprofittech.org,555-2005,NonProfit Tech,,,LinkedIn,Nurturing,2024-04-30,2024-06-15,40000,30,Non-profit management system
+21,Gary,Turner,gary.turner@insuretechplus.com,555-1041,InsureTech Plus,41,5,Referral,Qualified,2024-05-05,2024-08-06,105000,73,Insurance claim automation - converted to contact
+22,Jason,Campbell,jason.campbell@legaltechsys.com,555-1043,LegalTech Systems,43,2,Email Campaign,Proposal,2024-05-10,2024-08-03,125000,87,Legal document management - converted to contact
+23,Jeffrey,Evans,jeffrey.evans@consultproservices.com,555-1045,ConsultPro Services,45,3,Trade Show,Qualified,2024-05-15,2024-08-08,160000,79,Consulting project management - converted to contact
+24,Ryan,Collins,ryan.collins@buildtechsol.com,555-1047,BuildTech Solutions,47,1,Cold Call,Negotiation,2024-05-20,2024-08-04,190000,91,Construction project tracking - converted to contact
+25,Jacob,Sanchez,jacob.sanchez@cleanenergysys.com,555-1049,CleanEnergy Systems,49,4,Website,Qualified,2024-05-25,2024-08-09,95000,67,Clean energy monitoring - converted to contact
+26,Nicholas,Reed,nicholas.reed@pharmaconnect.com,555-1051,PharmaConnect,51,5,Conference,Proposal,2024-05-30,2024-08-13,145000,84,Pharmaceutical compliance system - converted to contact
+27,Alex,Morgan,alex.m@startuphub.com,555-2006,Startup Hub,,,LinkedIn,New,2024-06-03,2024-06-03,50000,15,Startup platform inquiry
+28,Jonathan,Murphy,jonathan.murphy@globaltradecorp.com,555-1055,GlobalTrade Corp,55,3,Referral,Nurturing,2024-06-08,2024-08-06,85000,42,International trade software - converted to contact
+29,Tyler,Rivera,tyler.rivera@wellnesstech.com,555-1057,WellnessTech Inc,57,1,Email Campaign,Qualified,2024-06-12,2024-08-08,75000,71,Wellness tracking platform - converted to contact
+30,Samuel,Richardson,samuel.richardson@smarthomesys.com,555-1059,SmartHome Systems,59,4,Trade Show,Proposal,2024-06-18,2024-08-15,120000,86,Smart home automation - converted to contact
+31,Emma,Taylor,emma.t@eventmanage.com,555-2007,EventManage Pro,,,Cold Call,New,2024-06-22,2024-06-22,70000,25,Event management inquiry
+32,Zachary,Peterson,zachary.peterson@fashiontechsol.com,555-1063,FashionTech Solutions,63,2,Website,Nurturing,2024-06-28,2024-08-09,55000,48,Fashion trend analytics - converted to contact
+33,Nathan,Ramirez,nathan.ramirez@pettechinno.com,555-1065,PetTech Innovations,65,3,Conference,Qualified,2024-07-02,2024-08-07,45000,62,Pet health monitoring - converted to contact
+34,Aaron,Watson,aaron.watson@gamedevstudios.com,555-1067,GameDev Studios,67,1,LinkedIn,Proposal,2024-07-08,2024-08-14,100000,83,Game development tools - converted to contact
+35,Jose,Kelly,jose.kelly@droneflowsys.com,555-1069,DroneFlow Systems,69,4,Referral,Qualified,2024-07-12,2024-08-06,90000,69,Drone fleet management - converted to contact
+36,Adam,Price,adam.price@vrinnovations.com,555-1071,VR Innovations,71,5,Email Campaign,Negotiation,2024-07-18,2024-08-03,135000,89,VR training platform - converted to contact
+37,Michael,Brown,m.brown@blocktech.com,555-2008,BlockTech Inc,,,Trade Show,New,2024-07-22,2024-07-22,110000,20,Blockchain solutions inquiry
+38,Ralph,Ross,ralph.ross@iotsolutionsplus.com,555-1075,IoT Solutions Plus,75,3,Cold Call,Proposal,2024-07-28,2024-08-12,125000,81,IoT device management - converted to contact
+39,Roy,Coleman,roy.coleman@airesearchcorp.com,555-1077,AI Research Corp,77,1,Website,Qualified,2024-08-01,2024-08-13,180000,77,AI research platform - converted to contact
+40,Grace,Johnson,grace.j@robotech.com,555-2009,RoboTech,,,Conference,Nurturing,2024-08-05,2024-08-05,95000,40,Robotics solutions interest
+41,Wayne,Long,wayne.long@spacetechventures.com,555-1081,SpaceTech Ventures,81,5,LinkedIn,Qualified,2024-08-10,2024-08-05,160000,75,Space mission software - converted to contact
+42,Peter,Hughes,peter.hughes@quantumflow.com,555-1083,QuantumFlow,83,2,Referral,Proposal,2024-08-14,2024-08-12,200000,88,Quantum computing platform - converted to contact
+43,Karen,Lee,karen.l@nanotech.com,555-2010,NanoTech Corp,,,Email Campaign,New,2024-01-30,2024-01-30,80000,15,Nanotechnology inquiry
+44,Carl,Simmons,carl.simmons@geotechsys.com,555-1087,GeoTech Systems,87,1,Trade Show,Nurturing,2024-02-05,2024-08-13,65000,46,GIS mapping software - converted to contact
+45,Harold,Gonzales,harold.gonzales@weathertechpro.com,555-1089,WeatherTech Pro,89,4,Cold Call,Qualified,2024-02-10,2024-08-09,55000,59,Weather prediction system - converted to contact
+46,Gerald,Alexander,gerald.alexander@oceantech.com,555-1091,OceanTech Inc,91,5,Website,Proposal,2024-02-15,2024-08-15,115000,85,Ocean monitoring platform - converted to contact
+47,Jordan,Griffin,jordan.griffin@mountaintechsys.com,555-1093,MountainTech Systems,93,2,Conference,Qualified,2024-02-20,2024-08-03,70000,63,Outdoor gear tracking - converted to contact
+48,Terry,Hayes,terry.hayes@urbantechsol.com,555-1095,UrbanTech Solutions,95,3,LinkedIn,Negotiation,2024-02-25,2024-08-11,155000,92,Urban planning software - converted to contact
+49,Willie,Ford,willie.ford@ruraltechconnect.com,555-1097,RuralTech Connect,97,1,Referral,Qualified,2024-03-02,2024-08-07,50000,57,Rural connectivity solution - converted to contact
+50,Louis,Graham,louis.graham@futuretechinno.com,555-1099,FutureTech Innovations,99,4,Email Campaign,Proposal,2024-03-08,2024-08-14,175000,87,Innovation research platform - converted to contact
+51,Rachel,Martinez,rachel.m@techflow.com,555-2011,TechFlow Industries,,,Website,New,2024-03-15,2024-03-15,85000,20,Enterprise software inquiry
+52,Kevin,Anderson,kevin.a@energyco.com,555-2012,Energy Co,,,Cold Call,Nurturing,2024-03-20,2024-05-10,60000,35,Energy management interest
+53,Maria,Lopez,maria.l@datatech.com,555-2013,DataTech Solutions,,,LinkedIn,New,2024-03-25,2024-03-25,130000,25,Data analytics inquiry
+54,Robert,Taylor,robert.t@healthsys.com,555-2014,HealthSys Inc,,,Email Campaign,Nurturing,2024-04-01,2024-06-20,165000,45,Healthcare IT interest
+55,Diana,Wilson,diana.w@retailsol.com,555-2015,Retail Solutions,,,Trade Show,New,2024-04-08,2024-04-08,95000,15,Retail platform inquiry
+56,Thomas,Brown,thomas.b@fintech.com,555-2016,FinTech Pro,,,Conference,Nurturing,2024-04-15,2024-07-05,140000,40,Financial software interest
+57,Nicole,Davis,nicole.d@manufacturetech.com,555-2017,ManufactureTech,,,Website,New,2024-04-22,2024-04-22,120000,20,Manufacturing solutions inquiry
+58,James,Miller,james.m@edutech.com,555-2018,EduTech Pro,,,Cold Call,Nurturing,2024-04-29,2024-07-15,75000,35,Educational platform interest
+59,Angela,Garcia,angela.g@cloudtech.com,555-2019,CloudTech Systems,,,LinkedIn,New,2024-05-06,2024-05-06,105000,25,Cloud services inquiry
+60,Mark,Johnson,mark.j@logistics.com,555-2020,Logistics Plus,,,Email Campaign,Nurturing,2024-05-13,2024-08-01,85000,40,Fleet management interest
+61,Laura,Williams,laura.w@securetech.com,555-2021,SecureTech Corp,,,Trade Show,New,2024-05-20,2024-05-20,90000,15,Security solutions inquiry
+62,Carlos,Rodriguez,carlos.r@biotech.com,555-2022,BioTech Labs,,,Conference,Nurturing,2024-05-27,2024-08-10,110000,45,Lab management interest
+63,Patricia,Martinez,patricia.m@agritech.com,555-2023,AgriTech Solutions,,,Website,New,2024-06-03,2024-06-03,65000,20,Agricultural tech inquiry
+64,Anthony,Lee,anthony.l@realestate.com,555-2024,RealEstate Tech,,,Cold Call,Nurturing,2024-06-10,2024-08-05,145000,40,Property management interest
+65,Michelle,White,michelle.w@mediatech.com,555-2025,MediaTech Corp,,,LinkedIn,New,2024-06-17,2024-06-17,100000,25,Media platform inquiry
+66,Daniel,Clark,daniel.c@traveltech.com,555-2026,TravelTech Solutions,,,Email Campaign,Nurturing,2024-06-24,2024-08-12,80000,35,Travel booking interest
+67,Jessica,Lewis,jessica.l@foodtech.com,555-2027,FoodTech Systems,,,Trade Show,New,2024-07-01,2024-07-01,70000,15,Food safety inquiry
+68,Matthew,Walker,matthew.w@sportstech.com,555-2028,SportsTech Systems,,,Conference,Nurturing,2024-07-08,2024-08-15,85000,35,Sports analytics interest
+69,Christopher,Hall,chris.h@autotech.com,555-2029,AutoTech Corp,,,Website,New,2024-07-15,2024-07-15,125000,20,Automotive solutions inquiry
+70,Amanda,Young,amanda.y@nonprofit.org,555-2030,NonProfit Solutions,,,Cold Call,Nurturing,2024-07-22,2024-08-10,60000,30,Non-profit platform interest
+71,Scott,King,scott.k@insurtech.com,555-2031,InsurTech Pro,,,LinkedIn,New,2024-07-29,2024-07-29,115000,25,Insurance tech inquiry
+72,Rebecca,Wright,rebecca.w@legaltech.com,555-2032,LegalTech Pro,,,Email Campaign,Nurturing,2024-08-05,2024-08-12,135000,40,Legal solutions interest
+73,Brian,Lopez,brian.l@consulttech.com,555-2033,ConsultTech Inc,,,Trade Show,New,2024-08-12,2024-08-12,150000,15,Consulting platform inquiry
+74,Stephanie,Hill,stephanie.h@buildtech.com,555-2034,BuildTech Corp,,,Conference,Nurturing,2024-01-18,2024-04-20,130000,45,Construction tech interest
+75,Frank,Scott,frank.s@cleantech.com,555-2035,CleanTech Solutions,,,Website,New,2024-01-25,2024-01-25,95000,20,Clean energy inquiry
+76,Melissa,Green,melissa.g@pharmatech.com,555-2036,PharmaTech Inc,,,Cold Call,Nurturing,2024-02-01,2024-05-15,165000,40,Pharmaceutical solutions interest
+77,Gregory,Adams,gregory.a@startuptech.com,555-2037,StartupTech Hub,,,LinkedIn,New,2024-02-08,2024-02-08,55000,15,Startup platform inquiry
+78,Jennifer,Baker,jennifer.b@globaltech.com,555-2038,GlobalTech Corp,,,Email Campaign,Nurturing,2024-02-15,2024-06-10,90000,35,International solutions interest
+79,Eric,Gonzalez,eric.g@wellnesstech.com,555-2039,WellnessTech Corp,,,Trade Show,New,2024-02-22,2024-02-22,80000,20,Wellness platform inquiry
+80,Cynthia,Nelson,cynthia.n@smarttech.com,555-2040,SmartTech Systems,,,Conference,Nurturing,2024-03-01,2024-07-20,140000,45,Smart systems interest
+81,Paul,Carter,paul.c@eventtech.com,555-2041,EventTech Solutions,,,Website,New,2024-03-08,2024-03-08,75000,15,Event management inquiry
+82,Helen,Mitchell,helen.m@fashiontech.com,555-2042,FashionTech Inc,,,Cold Call,Nurturing,2024-03-15,2024-06-25,60000,35,Fashion tech interest
+83,Ralph,Perez,ralph.p@pettech.com,555-2043,PetTech Corp,,,LinkedIn,New,2024-03-22,2024-03-22,50000,20,Pet care inquiry
+84,Beverly,Roberts,beverly.r@gametech.com,555-2044,GameTech Studios,,,Email Campaign,Nurturing,2024-03-29,2024-07-15,120000,40,Gaming platform interest
+85,Eugene,Turner,eugene.t@dronetech.com,555-2045,DroneTech Inc,,,Trade Show,New,2024-04-05,2024-04-05,105000,15,Drone solutions inquiry
+86,Frances,Phillips,frances.p@vrtech.com,555-2046,VRTech Corp,,,Conference,Nurturing,2024-04-12,2024-08-05,155000,45,VR platform interest
+87,Albert,Campbell,albert.c@blockchain.com,555-2047,BlockChain Inc,,,Website,New,2024-04-19,2024-04-19,125000,20,Blockchain inquiry
+88,Gloria,Parker,gloria.p@iottech.com,555-2048,IoTTech Systems,,,Cold Call,Nurturing,2024-04-26,2024-08-01,110000,35,IoT solutions interest
+89,Roy,Evans,roy.e@aitech.com,555-2049,AITech Corp,,,LinkedIn,New,2024-05-03,2024-05-03,190000,25,AI platform inquiry
+90,Virginia,Edwards,virginia.e@robotech.com,555-2050,RoboTech Inc,,,Email Campaign,Nurturing,2024-05-10,2024-08-08,115000,40,Robotics interest
+91,Louis,Collins,louis.c@spacetech.com,555-2051,SpaceTech Corp,,,Trade Show,New,2024-05-17,2024-05-17,170000,15,Space tech inquiry
+92,Doris,Stewart,doris.s@quantumtech.com,555-2052,QuantumTech Inc,,,Conference,Nurturing,2024-05-24,2024-08-12,210000,50,Quantum computing interest
+93,Arthur,Sanchez,arthur.s@nanotech.com,555-2053,NanoTech Inc,,,Website,New,2024-05-31,2024-05-31,85000,20,Nanotechnology inquiry
+94,Cheryl,Morris,cheryl.m@geotech.com,555-2054,GeoTech Corp,,,Cold Call,Nurturing,2024-06-07,2024-08-15,70000,35,Geographic solutions interest
+95,Carl,Reed,carl.r@weathertech.com,555-2055,WeatherTech Corp,,,LinkedIn,New,2024-06-14,2024-06-14,65000,15,Weather tech inquiry
+96,Frances,Cook,frances.c@oceantech.com,555-2056,OceanTech Corp,,,Email Campaign,Nurturing,2024-06-21,2024-08-10,125000,40,Ocean solutions interest
+97,Harold,Morgan,harold.m@mountaintech.com,555-2057,MountainTech Inc,,,Trade Show,New,2024-06-28,2024-06-28,80000,20,Outdoor tech inquiry
+98,Marie,Bell,marie.b@urbantech.com,555-2058,UrbanTech Inc,,,Conference,Nurturing,2024-07-05,2024-08-14,160000,50,Urban planning interest
+99,Gerald,Murphy,gerald.m@ruraltech.com,555-2059,RuralTech Inc,,,Website,New,2024-07-12,2024-07-12,55000,15,Rural connectivity inquiry
+100,Janice,Rivera,janice.r@futuretech.com,555-2060,FutureTech Corp,,,Cold Call,Nurturing,2024-07-19,2024-08-13,185000,45,Future tech interest
+101,李,强,li.qiang@zktech.com.cn,+86-138-0013-8800,中科创新科技,101,6,Website,Qualified,2024-01-12,2024-08-12,280000,75,Enterprise innovation platform - converted to contact
+102,王,建华,wang.jianhua@huawei-digital.cn,+86-139-2628-8800,华为数字解决方案,102,7,Conference,Proposal,2024-01-18,2024-08-10,450000,85,Digital transformation solution - converted to contact
+103,Zhang,Wei,zhang.wei@qcloud.com,+86-135-8601-3300,腾讯云计算,,,Email Campaign,New,2024-02-01,2024-02-01,320000,20,Cloud computing platform inquiry
+104,马,小峰,ma.xiaofeng@alibaba-b2b.com,+86-186-5850-2000,阿里巴巴企业服务,105,8,Trade Show,Qualified,2024-02-08,2024-08-13,380000,80,B2B platform integration - converted to contact
+105,Liu,Gang,liu.gang@cloud.baidu.com,+86-138-1059-9200,百度智能云,,,LinkedIn,Nurturing,2024-02-15,2024-06-20,290000,40,AI cloud services interest
+106,赵,美玲,zhao.meiling@cloud.baidu.com,+86-135-2159-9300,百度智能云,107,6,Referral,Negotiation,2024-02-20,2024-08-11,310000,90,AI analytics platform - converted to contact
+107,徐,志强,xu.zhiqiang@kingdee.com,+86-138-2665-8800,金蝶软件,108,7,Website,Qualified,2024-02-25,2024-08-09,260000,70,ERP software solution - converted to contact
+108,Yang,Hui,yang.hui@yonyou.com,+86-186-1024-3700,用友网络,109,8,Cold Call,Proposal,2024-03-02,2024-08-15,240000,82,Business management platform - converted to contact
+109,Wu,Guoqiang,wu.guoqiang@hikvision.com,+86-138-5707-8800,海康威视,110,6,Conference,Qualified,2024-03-08,2024-08-06,200000,68,Security system upgrade - converted to contact
+110,陈,建国,chen.jianguo@dahuatech.com,+86-135-8768-8800,大华技术,111,7,Website,Proposal,2024-03-15,2024-08-12,180000,84,Video surveillance platform - converted to contact
+111,Sun,Lijun,sun.lijun@iflytek.com,+86-188-5536-9000,科大讯飞,112,8,LinkedIn,Qualified,2024-03-20,2024-08-04,220000,72,Speech AI integration - converted to contact
+112,李,志华,li.zhihua@byd.com,+86-138-9888-8800,比亚迪汽车,113,6,Trade Show,Proposal,2024-03-25,2024-08-10,350000,86,Automotive tech platform - converted to contact
+113,Wang,Meifeng,wang.meifeng@catl.com,+86-135-9385-9900,宁德时代,114,7,Email Campaign,Qualified,2024-04-01,2024-08-14,300000,74,Battery management system - converted to contact
+114,Zhou,Xiaoming,zhou.xiaoming@sany.com.cn,+86-186-7318-9200,三一重工,115,8,Referral,Negotiation,2024-04-08,2024-08-08,420000,88,Heavy machinery IoT - converted to contact
+115,张,国华,zhang.guohua@xcmg.com,+86-138-1687-7300,徐工集团,116,6,Conference,Qualified,2024-04-15,2024-08-13,380000,76,Construction equipment platform - converted to contact
+116,何,丽华,he.lihua@midea.com,+86-138-2632-2600,美的集团,117,7,Website,Proposal,2024-04-20,2024-08-07,250000,83,Smart appliance platform - converted to contact
+117,Lin,Jiankang,lin.jiankang@gree.com,+86-135-7568-6100,格力电器,118,8,Cold Call,Qualified,2024-04-25,2024-08-11,230000,71,HVAC control system - converted to contact
+118,刘,建军,liu.jianjun@jdl.cn,+86-138-8912-0000,京东物流,119,6,LinkedIn,Proposal,2024-05-01,2024-08-09,280000,85,Logistics optimization platform - converted to contact
+119,Feng,Xiaoli,feng.xiaoli@sf-express.com,+86-135-3348-8800,顺丰速运,120,7,Trade Show,Qualified,2024-05-08,2024-08-15,260000,73,Express delivery tech - converted to contact
+120,黄,志明,huang.zhiming@xdf.cn,+86-138-6260-5500,新东方教育,121,8,Email Campaign,Negotiation,2024-05-15,2024-08-05,190000,89,Education platform upgrade - converted to contact
+121,Tang,Wei,tang.wei@100tal.com,+86-186-1052-9200,好未来教育,122,6,Website,Qualified,2024-05-20,2024-08-12,210000,77,Online education platform - converted to contact
+122,Chen,Xiaogang,chen.xiaogang@zktech.com.cn,+86-135-0013-8800,中科创新科技,,,Cold Call,New,2024-06-01,2024-06-01,180000,25,Innovation lab setup inquiry
+123,Li,Mei,li.mei@huawei-digital.cn,+86-138-2628-8000,华为数字解决方案,,,LinkedIn,Nurturing,2024-06-08,2024-07-25,320000,45,Digital solutions interest
+124,张,伟强,zhang.weiqiang@qcloud.com,+86-135-8601-3200,腾讯云计算,124,7,Conference,Qualified,2024-06-15,2024-08-11,280000,69,Cloud migration services - converted to contact
+125,杨,敏,yang.min@alibaba-b2b.com,+86-135-8502-2000,阿里巴巴企业服务,125,8,Website,Qualified,2024-06-20,2024-08-06,300000,66,E-commerce platform - converted to contact
+126,Kevin,Chan,kevin.chan@kingdee.com,+86-138-2665-8000,金蝶软件,126,6,Email Campaign,Proposal,2024-06-25,2024-08-14,220000,81,Financial software upgrade - converted to contact
+127,Michael,Wong,michael.wong@hikvision.com,+86-135-5707-8000,海康威视,127,7,Trade Show,Qualified,2024-07-01,2024-08-09,240000,65,Security analytics platform - converted to contact
+128,李,雅琴,li.yaqin@iflytek.com,+86-138-5536-9000,科大讯飞,128,8,Referral,Proposal,2024-07-08,2024-08-13,200000,78,Voice recognition system - converted to contact
+129,Susan,Zhu,susan.zhu@midea.com,+86-135-2632-2000,美的集团,129,6,Cold Call,Qualified,2024-07-15,2024-08-07,190000,62,IoT home solutions - converted to contact
+130,Peter,Wu,peter.wu@xdf.cn,+86-138-6260-5000,新东方教育,130,7,LinkedIn,Negotiation,2024-07-20,2024-08-10,160000,87,EdTech integration platform - converted to contact

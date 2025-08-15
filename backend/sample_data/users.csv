@@ -1,0 +1,9 @@
+user_id,first_name,last_name,email,role,hire_date,territory
+1,Sarah,Johnson,sarah.johnson@company.com,Senior Sales Rep,2022-03-15,West Coast
+2,Michael,Chen,michael.chen@company.com,Sales Rep,2023-01-10,East Coast
+3,Emily,Rodriguez,emily.rodriguez@company.com,Sales Manager,2021-08-22,Central
+4,David,Thompson,david.thompson@company.com,Sales Rep,2023-06-05,Southwest
+5,Jessica,Williams,jessica.williams@company.com,Senior Sales Rep,2022-11-18,Northeast
+6,James,Wong,james.wong@company.com.hk,Senior Sales Rep,2022-07-12,Hong Kong - Mainland China
+7,Lisa,Zhang,lisa.zhang@company.com.hk,Sales Rep,2023-03-08,Hong Kong - South China
+8,Kevin,Liu,kevin.liu@company.com.hk,Sales Manager,2021-11-15,Hong Kong - North China

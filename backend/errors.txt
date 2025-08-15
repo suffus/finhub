@@ -1,0 +1,534 @@
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.UserRole's field Users: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.UserRole's field Users: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.UserRole's field Users: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0mfailed to parse value &models.Tenant{ID:"", Name:"", Subdomain:"", IsActive:false, Settings:interface {}(nil), CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Users:[]models.User(nil), Companies:[]models.Company(nil), Contacts:[]models.Contact(nil), Leads:[]models.Lead(nil), Deals:[]models.Deal(nil), UserRoles:[]models.UserRole(nil), LeadStatuses:[]models.LeadStatus(nil), Industries:[]models.Industry(nil), CompanySizes:[]models.CompanySize(nil), LeadTemperatures:[]models.LeadTemperature(nil)}, got error invalid field found for struct finhub-backend/models.UserRole's field Users: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0mfailed to parse value &models.UserRole{ID:"", Name:"", Code:"", Description:(*string)(nil), IsActive:false, IsSystem:false, Permissions:interface {}(nil), TenantID:"", Tenant:models.Tenant{ID:"", Name:"", Subdomain:"", IsActive:false, Settings:interface {}(nil), CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Users:[]models.User(nil), Companies:[]models.Company(nil), Contacts:[]models.Contact(nil), Leads:[]models.Lead(nil), Deals:[]models.Deal(nil), UserRoles:[]models.UserRole(nil), LeadStatuses:[]models.LeadStatus(nil), Industries:[]models.Industry(nil), CompanySizes:[]models.CompanySize(nil), LeadTemperatures:[]models.LeadTemperature(nil)}, CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Users:[]models.User(nil)}, got error invalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.LeadStatus's field Leads: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.LeadStatus's field Leads: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.LeadStatus's field Leads: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.LeadStatus's field Leads: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.LeadStatus's field Leads: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.LeadStatus's field Leads: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0mfailed to parse value &models.CompanySize{ID:"", Name:"", Code:"", Description:(*string)(nil), MinEmployees:(*int)(nil), MaxEmployees:(*int)(nil), IsActive:false, TenantID:"", Tenant:models.Tenant{ID:"", Name:"", Subdomain:"", IsActive:false, Settings:interface {}(nil), CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Users:[]models.User(nil), Companies:[]models.Company(nil), Contacts:[]models.Contact(nil), Leads:[]models.Lead(nil), Deals:[]models.Deal(nil), UserRoles:[]models.UserRole(nil), LeadStatuses:[]models.LeadStatus(nil), Industries:[]models.Industry(nil), CompanySizes:[]models.CompanySize(nil), LeadTemperatures:[]models.LeadTemperature(nil)}, CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Companies:[]models.Company(nil)}, got error invalid field found for struct finhub-backend/models.LeadStatus's field Leads: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.LeadStatus's field Leads: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.LeadStatus's field Leads: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.LeadStatus's field Leads: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.LeadStatus's field Leads: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.LeadStatus's field Leads: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.LeadStatus's field Leads: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0mfailed to parse value &models.Company{ID:"", Name:"", Website:(*string)(nil), Domain:(*string)(nil), IndustryID:(*string)(nil), Industry:(*models.Industry)(nil), SizeID:(*string)(nil), Size:(*models.CompanySize)(nil), Revenue:(*float64)(nil), ExternalID:(*string)(nil), TenantID:"", Tenant:models.Tenant{ID:"", Name:"", Subdomain:"", IsActive:false, Settings:interface {}(nil), CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Users:[]models.User(nil), Companies:[]models.Company(nil), Contacts:[]models.Contact(nil), Leads:[]models.Lead(nil), Deals:[]models.Deal(nil), UserRoles:[]models.UserRole(nil), LeadStatuses:[]models.LeadStatus(nil), Industries:[]models.Industry(nil), CompanySizes:[]models.CompanySize(nil), LeadTemperatures:[]models.LeadTemperature(nil)}, CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), CreatedBy:(*string)(nil), IsDeleted:false, DeletedAt:<nil>, Contacts:[]models.Contact(nil), Deals:[]models.Deal(nil), Leads:[]models.Lead(nil)}, got error invalid field found for struct finhub-backend/models.LeadStatus's field Leads: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.LeadStatus's field Leads: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.LeadStatus's field Leads: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.LeadStatus's field Leads: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.LeadStatus's field Leads: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.LeadStatus's field Leads: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.LeadStatus's field Leads: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0mfailed to parse value &models.Contact{ID:"", FirstName:"", LastName:"", Title:(*string)(nil), Department:(*string)(nil), CompanyID:(*string)(nil), Company:(*models.Company)(nil), OriginalSource:(*string)(nil), EmailOptIn:false, SmsOptIn:false, CallOptIn:false, TenantID:"", Tenant:models.Tenant{ID:"", Name:"", Subdomain:"", IsActive:false, Settings:interface {}(nil), CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Users:[]models.User(nil), Companies:[]models.Company(nil), Contacts:[]models.Contact(nil), Leads:[]models.Lead(nil), Deals:[]models.Deal(nil), UserRoles:[]models.UserRole(nil), LeadStatuses:[]models.LeadStatus(nil), Industries:[]models.Industry(nil), CompanySizes:[]models.CompanySize(nil), LeadTemperatures:[]models.LeadTemperature(nil)}, CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), CreatedBy:(*string)(nil), IsDeleted:false, DeletedAt:<nil>, Leads:[]models.Lead(nil), Deals:[]models.Deal(nil)}, got error invalid field found for struct finhub-backend/models.LeadStatus's field Leads: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0mfailed to parse value &models.LeadStatus{ID:"", Name:"", Code:"", Description:(*string)(nil), Color:(*string)(nil), Order:0, IsActive:false, IsSystem:false, TenantID:"", Tenant:models.Tenant{ID:"", Name:"", Subdomain:"", IsActive:false, Settings:interface {}(nil), CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Users:[]models.User(nil), Companies:[]models.Company(nil), Contacts:[]models.Contact(nil), Leads:[]models.Lead(nil), Deals:[]models.Deal(nil), UserRoles:[]models.UserRole(nil), LeadStatuses:[]models.LeadStatus(nil), Industries:[]models.Industry(nil), CompanySizes:[]models.CompanySize(nil), LeadTemperatures:[]models.LeadTemperature(nil)}, CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Leads:[]models.Lead(nil)}, got error invalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0mfailed to parse value &models.LeadTemperature{ID:"", Name:"", Code:"", Description:(*string)(nil), Color:(*string)(nil), Order:0, IsActive:false, TenantID:"", Tenant:models.Tenant{ID:"", Name:"", Subdomain:"", IsActive:false, Settings:interface {}(nil), CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Users:[]models.User(nil), Companies:[]models.Company(nil), Contacts:[]models.Contact(nil), Leads:[]models.Lead(nil), Deals:[]models.Deal(nil), UserRoles:[]models.UserRole(nil), LeadStatuses:[]models.LeadStatus(nil), Industries:[]models.Industry(nil), CompanySizes:[]models.CompanySize(nil), LeadTemperatures:[]models.LeadTemperature(nil)}, CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Leads:[]models.Lead(nil)}, got error invalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0mfailed to parse value &models.Lead{ID:"", FirstName:(*string)(nil), LastName:(*string)(nil), Title:(*string)(nil), StatusID:(*string)(nil), Status:(*models.LeadStatus)(nil), TemperatureID:(*string)(nil), Temperature:(*models.LeadTemperature)(nil), Source:(*string)(nil), Campaign:(*string)(nil), Score:0, CompanyID:(*string)(nil), Company:(*models.Company)(nil), ContactID:(*string)(nil), Contact:(*models.Contact)(nil), AssignedUserID:(*string)(nil), AssignedUser:(*models.User)(nil), ConvertedAt:<nil>, ConvertedToDealID:(*string)(nil), TenantID:"", Tenant:models.Tenant{ID:"", Name:"", Subdomain:"", IsActive:false, Settings:interface {}(nil), CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Users:[]models.User(nil), Companies:[]models.Company(nil), Contacts:[]models.Contact(nil), Leads:[]models.Lead(nil), Deals:[]models.Deal(nil), UserRoles:[]models.UserRole(nil), LeadStatuses:[]models.LeadStatus(nil), Industries:[]models.Industry(nil), CompanySizes:[]models.CompanySize(nil), LeadTemperatures:[]models.LeadTemperature(nil)}, CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), CreatedBy:(*string)(nil), IsDeleted:false, DeletedAt:<nil>}, got error invalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0mfailed to parse value &models.Pipeline{ID:"", Name:"", IsActive:false, TenantID:"", Tenant:models.Tenant{ID:"", Name:"", Subdomain:"", IsActive:false, Settings:interface {}(nil), CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Users:[]models.User(nil), Companies:[]models.Company(nil), Contacts:[]models.Contact(nil), Leads:[]models.Lead(nil), Deals:[]models.Deal(nil), UserRoles:[]models.UserRole(nil), LeadStatuses:[]models.LeadStatus(nil), Industries:[]models.Industry(nil), CompanySizes:[]models.CompanySize(nil), LeadTemperatures:[]models.LeadTemperature(nil)}, CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Stages:[]models.Stage(nil), Deals:[]models.Deal(nil)}, got error invalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0mfailed to parse value &models.Stage{ID:"", Name:"", Order:0, Probability:0, IsClosedWon:false, IsClosedLost:false, Color:(*string)(nil), PipelineID:"", Pipeline:models.Pipeline{ID:"", Name:"", IsActive:false, TenantID:"", Tenant:models.Tenant{ID:"", Name:"", Subdomain:"", IsActive:false, Settings:interface {}(nil), CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Users:[]models.User(nil), Companies:[]models.Company(nil), Contacts:[]models.Contact(nil), Leads:[]models.Lead(nil), Deals:[]models.Deal(nil), UserRoles:[]models.UserRole(nil), LeadStatuses:[]models.LeadStatus(nil), Industries:[]models.Industry(nil), CompanySizes:[]models.CompanySize(nil), LeadTemperatures:[]models.LeadTemperature(nil)}, CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Stages:[]models.Stage(nil), Deals:[]models.Deal(nil)}, TenantID:"", Tenant:models.Tenant{ID:"", Name:"", Subdomain:"", IsActive:false, Settings:interface {}(nil), CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Users:[]models.User(nil), Companies:[]models.Company(nil), Contacts:[]models.Contact(nil), Leads:[]models.Lead(nil), Deals:[]models.Deal(nil), UserRoles:[]models.UserRole(nil), LeadStatuses:[]models.LeadStatus(nil), Industries:[]models.Industry(nil), CompanySizes:[]models.CompanySize(nil), LeadTemperatures:[]models.LeadTemperature(nil)}, Deals:[]models.Deal(nil)}, got error invalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0mfailed to parse value &models.Deal{ID:"", Name:"", Amount:(*float64)(nil), Currency:"", Probability:0, PipelineID:"", Pipeline:models.Pipeline{ID:"", Name:"", IsActive:false, TenantID:"", Tenant:models.Tenant{ID:"", Name:"", Subdomain:"", IsActive:false, Settings:interface {}(nil), CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Users:[]models.User(nil), Companies:[]models.Company(nil), Contacts:[]models.Contact(nil), Leads:[]models.Lead(nil), Deals:[]models.Deal(nil), UserRoles:[]models.UserRole(nil), LeadStatuses:[]models.LeadStatus(nil), Industries:[]models.Industry(nil), CompanySizes:[]models.CompanySize(nil), LeadTemperatures:[]models.LeadTemperature(nil)}, CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Stages:[]models.Stage(nil), Deals:[]models.Deal(nil)}, StageID:"", Stage:models.Stage{ID:"", Name:"", Order:0, Probability:0, IsClosedWon:false, IsClosedLost:false, Color:(*string)(nil), PipelineID:"", Pipeline:models.Pipeline{ID:"", Name:"", IsActive:false, TenantID:"", Tenant:models.Tenant{ID:"", Name:"", Subdomain:"", IsActive:false, Settings:interface {}(nil), CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Users:[]models.User(nil), Companies:[]models.Company(nil), Contacts:[]models.Contact(nil), Leads:[]models.Lead(nil), Deals:[]models.Deal(nil), UserRoles:[]models.UserRole(nil), LeadStatuses:[]models.LeadStatus(nil), Industries:[]models.Industry(nil), CompanySizes:[]models.CompanySize(nil), LeadTemperatures:[]models.LeadTemperature(nil)}, CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Stages:[]models.Stage(nil), Deals:[]models.Deal(nil)}, TenantID:"", Tenant:models.Tenant{ID:"", Name:"", Subdomain:"", IsActive:false, Settings:interface {}(nil), CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Users:[]models.User(nil), Companies:[]models.Company(nil), Contacts:[]models.Contact(nil), Leads:[]models.Lead(nil), Deals:[]models.Deal(nil), UserRoles:[]models.UserRole(nil), LeadStatuses:[]models.LeadStatus(nil), Industries:[]models.Industry(nil), CompanySizes:[]models.CompanySize(nil), LeadTemperatures:[]models.LeadTemperature(nil)}, Deals:[]models.Deal(nil)}, ExpectedCloseDate:<nil>, ActualCloseDate:<nil>, CompanyID:(*string)(nil), Company:(*models.Company)(nil), ContactID:(*string)(nil), Contact:(*models.Contact)(nil), AssignedUserID:(*string)(nil), AssignedUser:(*models.User)(nil), TenantID:"", Tenant:models.Tenant{ID:"", Name:"", Subdomain:"", IsActive:false, Settings:interface {}(nil), CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Users:[]models.User(nil), Companies:[]models.Company(nil), Contacts:[]models.Contact(nil), Leads:[]models.Lead(nil), Deals:[]models.Deal(nil), UserRoles:[]models.UserRole(nil), LeadStatuses:[]models.LeadStatus(nil), Industries:[]models.Industry(nil), CompanySizes:[]models.CompanySize(nil), LeadTemperatures:[]models.LeadTemperature(nil)}, CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), CreatedBy:(*string)(nil), IsDeleted:false, DeletedAt:<nil>}, got error invalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0mfailed to parse value &models.MarketingSourceType{ID:"", Name:"", Code:"", Description:(*string)(nil), Color:(*string)(nil), IsActive:false, TenantID:"", Tenant:models.Tenant{ID:"", Name:"", Subdomain:"", IsActive:false, Settings:interface {}(nil), CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Users:[]models.User(nil), Companies:[]models.Company(nil), Contacts:[]models.Contact(nil), Leads:[]models.Lead(nil), Deals:[]models.Deal(nil), UserRoles:[]models.UserRole(nil), LeadStatuses:[]models.LeadStatus(nil), Industries:[]models.Industry(nil), CompanySizes:[]models.CompanySize(nil), LeadTemperatures:[]models.LeadTemperature(nil)}, CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC)}, got error invalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0mfailed to parse value &models.MarketingSource{ID:"", Name:"", TypeID:(*string)(nil), Medium:(*string)(nil), Campaign:(*string)(nil), Source:(*string)(nil), Content:(*string)(nil), Term:(*string)(nil), TenantID:"", Tenant:models.Tenant{ID:"", Name:"", Subdomain:"", IsActive:false, Settings:interface {}(nil), CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Users:[]models.User(nil), Companies:[]models.Company(nil), Contacts:[]models.Contact(nil), Leads:[]models.Lead(nil), Deals:[]models.Deal(nil), UserRoles:[]models.UserRole(nil), LeadStatuses:[]models.LeadStatus(nil), Industries:[]models.Industry(nil), CompanySizes:[]models.CompanySize(nil), LeadTemperatures:[]models.LeadTemperature(nil)}, CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC)}, got error invalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0mfailed to parse value &models.MarketingAssetType{ID:"", Name:"", Code:"", Description:(*string)(nil), Color:(*string)(nil), IsActive:false, TenantID:"", Tenant:models.Tenant{ID:"", Name:"", Subdomain:"", IsActive:false, Settings:interface {}(nil), CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Users:[]models.User(nil), Companies:[]models.Company(nil), Contacts:[]models.Contact(nil), Leads:[]models.Lead(nil), Deals:[]models.Deal(nil), UserRoles:[]models.UserRole(nil), LeadStatuses:[]models.LeadStatus(nil), Industries:[]models.Industry(nil), CompanySizes:[]models.CompanySize(nil), LeadTemperatures:[]models.LeadTemperature(nil)}, CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC)}, got error invalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0mfailed to parse value &models.MarketingAsset{ID:"", Name:"", TypeID:(*string)(nil), URL:(*string)(nil), Content:(*string)(nil), Views:0, Clicks:0, Conversions:0, TenantID:"", Tenant:models.Tenant{ID:"", Name:"", Subdomain:"", IsActive:false, Settings:interface {}(nil), CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Users:[]models.User(nil), Companies:[]models.Company(nil), Contacts:[]models.Contact(nil), Leads:[]models.Lead(nil), Deals:[]models.Deal(nil), UserRoles:[]models.UserRole(nil), LeadStatuses:[]models.LeadStatus(nil), Industries:[]models.Industry(nil), CompanySizes:[]models.CompanySize(nil), LeadTemperatures:[]models.LeadTemperature(nil)}, CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC)}, got error invalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0mfailed to parse value &models.CommunicationType{ID:"", Name:"", Code:"", Description:(*string)(nil), Icon:(*string)(nil), IsActive:false, TenantID:"", Tenant:models.Tenant{ID:"", Name:"", Subdomain:"", IsActive:false, Settings:interface {}(nil), CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Users:[]models.User(nil), Companies:[]models.Company(nil), Contacts:[]models.Contact(nil), Leads:[]models.Lead(nil), Deals:[]models.Deal(nil), UserRoles:[]models.UserRole(nil), LeadStatuses:[]models.LeadStatus(nil), Industries:[]models.Industry(nil), CompanySizes:[]models.CompanySize(nil), LeadTemperatures:[]models.LeadTemperature(nil)}, CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC)}, got error invalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.LeadStatus's field Leads: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.LeadStatus's field Leads: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.LeadStatus's field Leads: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.LeadStatus's field Leads: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.LeadStatus's field Leads: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.LeadStatus's field Leads: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.LeadStatus's field Leads: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0mfailed to parse value &models.Communication{ID:"", Subject:(*string)(nil), Content:(*string)(nil), Direction:"", ScheduledAt:<nil>, SentAt:<nil>, ReceivedAt:<nil>, ExternalID:(*string)(nil), UserID:(*string)(nil), User:(*models.User)(nil), ContactID:(*string)(nil), Contact:(*models.Contact)(nil), LeadID:(*string)(nil), Lead:(*models.Lead)(nil), DealID:(*string)(nil), Deal:(*models.Deal)(nil), TenantID:"", Tenant:models.Tenant{ID:"", Name:"", Subdomain:"", IsActive:false, Settings:interface {}(nil), CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Users:[]models.User(nil), Companies:[]models.Company(nil), Contacts:[]models.Contact(nil), Leads:[]models.Lead(nil), Deals:[]models.Deal(nil), UserRoles:[]models.UserRole(nil), LeadStatuses:[]models.LeadStatus(nil), Industries:[]models.Industry(nil), CompanySizes:[]models.CompanySize(nil), LeadTemperatures:[]models.LeadTemperature(nil)}, CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC)}, got error invalid field found for struct finhub-backend/models.LeadStatus's field Leads: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0mfailed to parse value &models.TaskType{ID:"", Name:"", Code:"", Description:(*string)(nil), Color:(*string)(nil), Icon:(*string)(nil), IsActive:false, TenantID:"", Tenant:models.Tenant{ID:"", Name:"", Subdomain:"", IsActive:false, Settings:interface {}(nil), CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Users:[]models.User(nil), Companies:[]models.Company(nil), Contacts:[]models.Contact(nil), Leads:[]models.Lead(nil), Deals:[]models.Deal(nil), UserRoles:[]models.UserRole(nil), LeadStatuses:[]models.LeadStatus(nil), Industries:[]models.Industry(nil), CompanySizes:[]models.CompanySize(nil), LeadTemperatures:[]models.LeadTemperature(nil)}, CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC)}, got error invalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0mfailed to parse value &models.Task{ID:"", Title:"", Description:(*string)(nil), Priority:"", Status:"", DueDate:<nil>, CompletedAt:<nil>, AssignedUserID:(*string)(nil), AssignedUser:(*models.User)(nil), CreatedBy:(*string)(nil), LeadID:(*string)(nil), Lead:(*models.Lead)(nil), DealID:(*string)(nil), Deal:(*models.Deal)(nil), TenantID:"", Tenant:models.Tenant{ID:"", Name:"", Subdomain:"", IsActive:false, Settings:interface {}(nil), CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Users:[]models.User(nil), Companies:[]models.Company(nil), Contacts:[]models.Contact(nil), Leads:[]models.Lead(nil), Deals:[]models.Deal(nil), UserRoles:[]models.UserRole(nil), LeadStatuses:[]models.LeadStatus(nil), Industries:[]models.Industry(nil), CompanySizes:[]models.CompanySize(nil), LeadTemperatures:[]models.LeadTemperature(nil)}, CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC)}, got error invalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0mfailed to parse value &models.TerritoryType{ID:"", Name:"", Code:"", Description:(*string)(nil), IsActive:false, TenantID:"", Tenant:models.Tenant{ID:"", Name:"", Subdomain:"", IsActive:false, Settings:interface {}(nil), CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Users:[]models.User(nil), Companies:[]models.Company(nil), Contacts:[]models.Contact(nil), Leads:[]models.Lead(nil), Deals:[]models.Deal(nil), UserRoles:[]models.UserRole(nil), LeadStatuses:[]models.LeadStatus(nil), Industries:[]models.Industry(nil), CompanySizes:[]models.CompanySize(nil), LeadTemperatures:[]models.LeadTemperature(nil)}, CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC)}, got error invalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0mfailed to parse value &models.Territory{ID:"", Name:"", TypeID:(*string)(nil), Countries:[]string(nil), States:[]string(nil), Cities:[]string(nil), PostalCodes:[]string(nil), Industries:[]string(nil), CompanySize:[]string(nil), TenantID:"", Tenant:models.Tenant{ID:"", Name:"", Subdomain:"", IsActive:false, Settings:interface {}(nil), CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Users:[]models.User(nil), Companies:[]models.Company(nil), Contacts:[]models.Contact(nil), Leads:[]models.Lead(nil), Deals:[]models.Deal(nil), UserRoles:[]models.UserRole(nil), LeadStatuses:[]models.LeadStatus(nil), Industries:[]models.Industry(nil), CompanySizes:[]models.CompanySize(nil), LeadTemperatures:[]models.LeadTemperature(nil)}, CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC)}, got error invalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0mfailed to parse value &models.CustomField{ID:"", Name:"", Label:"", Type:"", EntityType:"", IsRequired:false, IsUnique:false, DefaultValue:(*string)(nil), Options:interface {}(nil), LookupEntity:(*string)(nil), Validation:interface {}(nil), TenantID:"", Tenant:models.Tenant{ID:"", Name:"", Subdomain:"", IsActive:false, Settings:interface {}(nil), CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Users:[]models.User(nil), Companies:[]models.Company(nil), Contacts:[]models.Contact(nil), Leads:[]models.Lead(nil), Deals:[]models.Deal(nil), UserRoles:[]models.UserRole(nil), LeadStatuses:[]models.LeadStatus(nil), Industries:[]models.Industry(nil), CompanySizes:[]models.CompanySize(nil), LeadTemperatures:[]models.LeadTemperature(nil)}, CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC)}, got error invalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0mfailed to parse value &models.CustomObject{ID:"", Name:"", Label:"", PluralLabel:"", TenantID:"", Tenant:models.Tenant{ID:"", Name:"", Subdomain:"", IsActive:false, Settings:interface {}(nil), CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Users:[]models.User(nil), Companies:[]models.Company(nil), Contacts:[]models.Contact(nil), Leads:[]models.Lead(nil), Deals:[]models.Deal(nil), UserRoles:[]models.UserRole(nil), LeadStatuses:[]models.LeadStatus(nil), Industries:[]models.Industry(nil), CompanySizes:[]models.CompanySize(nil), LeadTemperatures:[]models.LeadTemperature(nil)}, CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC)}, got error invalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0mfailed to parse value &models.PhoneNumberType{ID:"", Name:"", Code:"", Description:(*string)(nil), IsActive:false, TenantID:"", Tenant:models.Tenant{ID:"", Name:"", Subdomain:"", IsActive:false, Settings:interface {}(nil), CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Users:[]models.User(nil), Companies:[]models.Company(nil), Contacts:[]models.Contact(nil), Leads:[]models.Lead(nil), Deals:[]models.Deal(nil), UserRoles:[]models.UserRole(nil), LeadStatuses:[]models.LeadStatus(nil), Industries:[]models.Industry(nil), CompanySizes:[]models.CompanySize(nil), LeadTemperatures:[]models.LeadTemperature(nil)}, CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC)}, got error invalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0mfailed to parse value &models.PhoneNumber{ID:"", Number:"", Extension:(*string)(nil), IsPrimary:false, TypeID:(*string)(nil), EntityID:"", EntityType:"", TenantID:"", Tenant:models.Tenant{ID:"", Name:"", Subdomain:"", IsActive:false, Settings:interface {}(nil), CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Users:[]models.User(nil), Companies:[]models.Company(nil), Contacts:[]models.Contact(nil), Leads:[]models.Lead(nil), Deals:[]models.Deal(nil), UserRoles:[]models.UserRole(nil), LeadStatuses:[]models.LeadStatus(nil), Industries:[]models.Industry(nil), CompanySizes:[]models.CompanySize(nil), LeadTemperatures:[]models.LeadTemperature(nil)}, CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC)}, got error invalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0mfailed to parse value &models.EmailAddressType{ID:"", Name:"", Code:"", Description:(*string)(nil), IsActive:false, TenantID:"", Tenant:models.Tenant{ID:"", Name:"", Subdomain:"", IsActive:false, Settings:interface {}(nil), CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Users:[]models.User(nil), Companies:[]models.Company(nil), Contacts:[]models.Contact(nil), Leads:[]models.Lead(nil), Deals:[]models.Deal(nil), UserRoles:[]models.UserRole(nil), LeadStatuses:[]models.LeadStatus(nil), Industries:[]models.Industry(nil), CompanySizes:[]models.CompanySize(nil), LeadTemperatures:[]models.LeadTemperature(nil)}, CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC)}, got error invalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0mfailed to parse value &models.EmailAddress{ID:"", Email:"", IsPrimary:false, IsVerified:false, TypeID:(*string)(nil), EntityID:"", EntityType:"", TenantID:"", Tenant:models.Tenant{ID:"", Name:"", Subdomain:"", IsActive:false, Settings:interface {}(nil), CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Users:[]models.User(nil), Companies:[]models.Company(nil), Contacts:[]models.Contact(nil), Leads:[]models.Lead(nil), Deals:[]models.Deal(nil), UserRoles:[]models.UserRole(nil), LeadStatuses:[]models.LeadStatus(nil), Industries:[]models.Industry(nil), CompanySizes:[]models.CompanySize(nil), LeadTemperatures:[]models.LeadTemperature(nil)}, CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC)}, got error invalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0mfailed to parse value &models.AddressType{ID:"", Name:"", Code:"", Description:(*string)(nil), IsActive:false, TenantID:"", Tenant:models.Tenant{ID:"", Name:"", Subdomain:"", IsActive:false, Settings:interface {}(nil), CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Users:[]models.User(nil), Companies:[]models.Company(nil), Contacts:[]models.Contact(nil), Leads:[]models.Lead(nil), Deals:[]models.Deal(nil), UserRoles:[]models.UserRole(nil), LeadStatuses:[]models.LeadStatus(nil), Industries:[]models.Industry(nil), CompanySizes:[]models.CompanySize(nil), LeadTemperatures:[]models.LeadTemperature(nil)}, CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC)}, got error invalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0mfailed to parse value &models.Address{ID:"", Street1:(*string)(nil), Street2:(*string)(nil), City:(*string)(nil), State:(*string)(nil), PostalCode:(*string)(nil), Country:(*string)(nil), IsPrimary:false, TypeID:(*string)(nil), EntityID:"", EntityType:"", TenantID:"", Tenant:models.Tenant{ID:"", Name:"", Subdomain:"", IsActive:false, Settings:interface {}(nil), CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Users:[]models.User(nil), Companies:[]models.Company(nil), Contacts:[]models.Contact(nil), Leads:[]models.Lead(nil), Deals:[]models.Deal(nil), UserRoles:[]models.UserRole(nil), LeadStatuses:[]models.LeadStatus(nil), Industries:[]models.Industry(nil), CompanySizes:[]models.CompanySize(nil), LeadTemperatures:[]models.LeadTemperature(nil)}, CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC)}, got error invalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0mfailed to parse value &models.SocialMediaType{ID:"", Name:"", Code:"", Icon:(*string)(nil), BaseURL:(*string)(nil), IsActive:false, TenantID:"", Tenant:models.Tenant{ID:"", Name:"", Subdomain:"", IsActive:false, Settings:interface {}(nil), CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Users:[]models.User(nil), Companies:[]models.Company(nil), Contacts:[]models.Contact(nil), Leads:[]models.Lead(nil), Deals:[]models.Deal(nil), UserRoles:[]models.UserRole(nil), LeadStatuses:[]models.LeadStatus(nil), Industries:[]models.Industry(nil), CompanySizes:[]models.CompanySize(nil), LeadTemperatures:[]models.LeadTemperature(nil)}, CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC)}, got error invalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0mfailed to parse value &models.SocialMediaAccount{ID:"", Username:(*string)(nil), URL:(*string)(nil), IsPrimary:false, TypeID:(*string)(nil), EntityID:"", EntityType:"", TenantID:"", Tenant:models.Tenant{ID:"", Name:"", Subdomain:"", IsActive:false, Settings:interface {}(nil), CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Users:[]models.User(nil), Companies:[]models.Company(nil), Contacts:[]models.Contact(nil), Leads:[]models.Lead(nil), Deals:[]models.Deal(nil), UserRoles:[]models.UserRole(nil), LeadStatuses:[]models.LeadStatus(nil), Industries:[]models.Industry(nil), CompanySizes:[]models.CompanySize(nil), LeadTemperatures:[]models.LeadTemperature(nil)}, CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC)}, got error invalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0mfailed to parse value &models.Tenant{ID:"", Name:"", Subdomain:"", IsActive:false, Settings:interface {}(nil), CreatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), UpdatedAt:time.Date(1, time.January, 1, 0, 0, 0, 0, time.UTC), Users:[]models.User(nil), Companies:[]models.Company(nil), Contacts:[]models.Contact(nil), Leads:[]models.Lead(nil), Deals:[]models.Deal(nil), UserRoles:[]models.UserRole(nil), LeadStatuses:[]models.LeadStatus(nil), Industries:[]models.Industry(nil), CompanySizes:[]models.CompanySize(nil), LeadTemperatures:[]models.LeadTemperature(nil)}, got error invalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
+
+2025/08/14 17:43:07 [35m/home/steve/Cursor/finhub/backend/main.go:29
+[0m[31m[error] [0minvalid field found for struct finhub-backend/models.CompanySize's field Companies: define a valid foreign key for relations or implement the Valuer/Scanner interface
