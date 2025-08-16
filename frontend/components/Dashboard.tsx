@@ -5,8 +5,13 @@ import { TrendingUp, Users, Target, DollarSign, Activity, Building2, Phone, Mail
 import { apiClient, DashboardStats } from '@/services/api'
 import { AddCompanyModal } from './AddCompanyModal'
 import { AddContactModal } from './AddContactModal'
+import { EntityType } from './EntityPage'
 
-export function Dashboard() {
+interface DashboardProps {
+  onEntitySelect?: (entityType: EntityType) => void
+}
+
+export function Dashboard({ onEntitySelect }: DashboardProps) {
   const [stats, setStats] = useState<DashboardStats | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)

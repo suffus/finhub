@@ -10,6 +10,17 @@ interface UseEntityListOptions {
   view?: string
 }
 
+import { useRef } from 'react'
+
+// Interface to track previous values for dependency comparison
+interface PrevValues {
+  page: number
+  pageSize: number
+  sortBy: string
+  sortOrder: 'asc' | 'desc'
+  view: string | null
+}
+
 export function useEntityList({
   entityType,
   initialPageSize = 20,
@@ -18,11 +29,22 @@ export function useEntityList({
   initialFilters = {},
   view
 }: UseEntityListOptions) {
+  // For infinite scrolling, we need to accumulate entities rather than replace them
   const [entities, setEntities] = useState<Record<string, any>[]>([])
+  const [accumulatedEntities, setAccumulatedEntities] = useState<Record<string, any>[]>([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [views, setViews] = useState<EntityViewConfig[]>([])
   const [currentView, setCurrentView] = useState<EntityViewConfig | null>(null)
+  
+  // Ref to track previous values for dependency comparison
+  const prevRef = useRef<PrevValues>({
+    page: 1,
+    pageSize: initialPageSize,
+    sortBy: initialSortBy || '',
+    sortOrder: initialSortOrder,
+    view: null
+  })
   
   // Pagination state
   const [page, setPage] = useState(1)
@@ -66,7 +88,7 @@ export function useEntityList({
   }, [entityType, view, initialSortBy])
 
   // Fetch entities
-  const fetchEntities = useCallback(async (resetPage = false) => {
+  const fetchEntities = useCallback(async (resetPage = false, appendResults = false) => {
     if (!currentView) return
 
     setLoading(true)
@@ -135,14 +157,29 @@ export function useEntityList({
       setSortBy(newSortBy)
       setSortOrder('asc')
     }
-    setPage(1) // Reset to first page
+    // Reset entities and page for new sorting
+    setEntities([])
+    setPage(1)
   }, [sortBy, sortOrder])
 
   // Change filters
   const changeFilters = useCallback((newFilters: Record<string, any>) => {
     setFilters(newFilters)
-    setPage(1) // Reset to first page
+    // Reset entities and page for new filters
+    setEntities([])
+    setPage(1)
   }, [])
+
+  // Update prevRef when values change
+  useEffect(() => {
+    prevRef.current = {
+      page,
+      pageSize,
+      sortBy,
+      sortOrder,
+      view: currentView?.name || null
+    }
+  }, [page, pageSize, sortBy, sortOrder, currentView])
 
   // Change view
   const changeView = useCallback((viewName: string) => {
@@ -161,12 +198,45 @@ export function useEntityList({
     fetchEntities(true)
   }, [fetchEntities])
 
-  // Load more (for infinite scroll if needed)
+  // Load more (for infinite scroll)
   const loadMore = useCallback(() => {
     if (hasMore && !loading) {
-      setPage(prev => prev + 1)
+      const nextPage = page + 1;
+      setPage(nextPage);
+      
+      // We need to fetch entities directly here instead of relying on useEffect
+      // to avoid race conditions with the page state update
+      if (currentView) {
+        const request: EntityQueryRequest = {
+          entityType,
+          page: nextPage,
+          pageSize,
+          sortBy,
+          sortOrder,
+          filters,
+          view: currentView.name
+        };
+        
+        setLoading(true);
+        apiClient.queryEntities(request).then(response => {
+          // Use optional chaining to safely access properties
+          const entities = response.data?.entities || [];
+          const totalCount = response.data?.totalCount || 0;
+          const totalPages = response.data?.totalPages || 0;
+          const hasMore = response.data?.hasMore || false;
+          
+          setEntities(prev => [...prev, ...entities]);
+          setTotalCount(totalCount);
+          setTotalPages(totalPages);
+          setHasMore(hasMore);
+          setLoading(false);
+        }).catch(err => {
+          setLoading(false);
+          console.error('Failed to load more entities:', err);
+        });
+      }
     }
-  }, [hasMore, loading])
+  }, [hasMore, loading, page, pageSize, sortBy, sortOrder, filters, currentView, entityType])
 
   return {
     // Data

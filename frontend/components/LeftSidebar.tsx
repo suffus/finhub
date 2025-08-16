@@ -18,11 +18,37 @@ import {
   Tag
 } from 'lucide-react'
 
+import { EntityType } from './EntityPage'
+
 interface LeftSidebarProps {
   isOpen: boolean
+  activeEntity?: EntityType | null
+  onEntitySelect?: (entityType: EntityType) => void
 }
 
-export function LeftSidebar({ isOpen }: LeftSidebarProps) {
+export function LeftSidebar({ isOpen, activeEntity = null, onEntitySelect }: LeftSidebarProps) {
+  // Map URL paths to entity types
+  const entityTypeMap: Record<string, EntityType> = {
+    '/companies': 'companies',
+    '/contacts': 'contacts',
+    '/leads': 'leads',
+    '/deals': 'deals',
+    '/industries': 'industries',
+    '/sizes': 'companysizes',
+    '/lead-statuses': 'leadstatuses',
+    '/temperatures': 'leadtemperatures'
+  }
+
+  // Handle entity item click
+  const handleEntityClick = (e: React.MouseEvent, href: string) => {
+    e.preventDefault()
+    
+    const entityType = entityTypeMap[href]
+    if (entityType && onEntitySelect) {
+      onEntitySelect(entityType)
+    }
+  }
+
   const navigationItems = [
     {
       title: 'Core CRM',
@@ -144,7 +170,12 @@ export function LeftSidebar({ isOpen }: LeftSidebarProps) {
                   <a
                     key={itemIndex}
                     href={item.href}
-                    className="flex items-start justify-between px-3 py-2 rounded-lg hover:bg-gray-100 transition-colors text-sm text-gray-700 group"
+                    onClick={(e) => entityTypeMap[item.href] && handleEntityClick(e, item.href)}
+                    className={`flex items-start justify-between px-3 py-2 rounded-lg hover:bg-gray-100 transition-colors text-sm group
+                      ${activeEntity === entityTypeMap[item.href] 
+                        ? 'bg-blue-50 text-blue-700 border-l-4 border-blue-500' 
+                        : 'text-gray-700'}
+                    `}
                   >
                     <div className="flex-1">
                       <span className="block">{item.name}</span>

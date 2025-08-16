@@ -220,9 +220,14 @@ class ApiClient {
       })
 
       if (response.status === 401) {
-        // Token expired or invalid
-        this.clearToken()
-        return { error: 'Authentication required' }
+        // Token expired or invalid or we dont have permission 
+        // in any case the token should not be cleared unless we have
+        // been explicitly asked to do so or we test it against the
+        // backend to see if it is valid and the backend says it is invalid
+        // simply receiving a 401 here is *not* sufficient to clear the token
+        
+        //this.clearToken()
+        return { error: 'Not Authenticated' }
       }
 
       if (!response.ok) {
