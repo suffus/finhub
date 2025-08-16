@@ -38,16 +38,17 @@ type PicklistResponse struct {
 func (h *PicklistHandler) GetPicklistByEntity(c *gin.Context) {
 	entityType := c.Param("entity")
 
-	// Get user from context
-	user, exists := c.Get("user")
+	// Get user ID from context
+	userID, exists := c.Get("user_id")
 	if !exists {
-		c.JSON(http.StatusUnauthorized, gin.H{"error": "User not found in context"})
+		c.JSON(http.StatusUnauthorized, gin.H{"error": "User not authenticated"})
 		return
 	}
 
-	userObj, ok := user.(models.User)
-	if !ok {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "Invalid user in context"})
+	// Get user from database
+	var userObj models.User
+	if err := h.db.Select("tenant_id").First(&userObj, "id = ?", userID).Error; err != nil {
+		c.JSON(http.StatusNotFound, gin.H{"error": "User not found"})
 		return
 	}
 
@@ -160,16 +161,17 @@ func (h *PicklistHandler) SearchPicklist(c *gin.Context) {
 		return
 	}
 
-	// Get user from context
-	user, exists := c.Get("user")
+	// Get user ID from context
+	userID, exists := c.Get("user_id")
 	if !exists {
-		c.JSON(http.StatusUnauthorized, gin.H{"error": "User not found in context"})
+		c.JSON(http.StatusUnauthorized, gin.H{"error": "User not authenticated"})
 		return
 	}
 
-	userObj, ok := user.(models.User)
-	if !ok {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": "Invalid user in context"})
+	// Get user from database
+	var userObj models.User
+	if err := h.db.Select("tenant_id").First(&userObj, "id = ?", userID).Error; err != nil {
+		c.JSON(http.StatusNotFound, gin.H{"error": "User not found"})
 		return
 	}
 

@@ -3,12 +3,15 @@
 import { useState } from 'react'
 import { TopToolbar } from '@/components/TopToolbar'
 import { LeftSidebar } from '@/components/LeftSidebar'
-import { Dashboard } from '@/components/Dashboard'
 import { Login } from '@/components/Login'
 import { useAuth } from '@/contexts/AuthContext'
+import { MainLayout } from '@/components/MainLayout'
+
+import { EntityType } from '@/components/EntityPage'
 
 export default function Home() {
   const [sidebarOpen, setSidebarOpen] = useState(true)
+  const [activeEntity, setActiveEntity] = useState<EntityType | null>(null)
   const { isAuthenticated, isLoading } = useAuth()
 
   // Show loading state
@@ -22,7 +25,7 @@ export default function Home() {
       </div>
     )
   }
-
+  console.log("isAuthenticated", isAuthenticated, isLoading)
   // Show login if not authenticated
   if (!isAuthenticated) {
     return <Login />
@@ -36,11 +39,18 @@ export default function Home() {
       
       <div className="flex flex-1 overflow-hidden">
         {/* Left Sidebar */}
-        <LeftSidebar isOpen={sidebarOpen} />
+        <LeftSidebar 
+          isOpen={sidebarOpen} 
+          activeEntity={activeEntity}
+          onEntitySelect={(entityType) => setActiveEntity(entityType)}
+        />
         
         {/* Main Content */}
         <main className="flex-1 overflow-auto">
-          <Dashboard />
+          <MainLayout 
+            initialEntity={activeEntity ? { type: activeEntity } : undefined}
+            onEntityChange={(entity) => setActiveEntity(entity?.type || null)}
+          />
         </main>
       </div>
     </div>

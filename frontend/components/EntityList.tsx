@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { ChevronUp, ChevronDown, ChevronLeft, ChevronRight, Filter, RefreshCw, Eye, Settings } from 'lucide-react'
 import { useEntityList } from '../hooks/useEntityList'
 import { Column, EntityViewConfig } from '../services/api'
+import { PicklistFilter } from './PicklistFilter'
 
 interface EntityListProps {
   entityType: string
@@ -42,18 +43,204 @@ export function EntityList({
 
   const [showFilters, setShowFilters] = useState(false)
   const [localFilters, setLocalFilters] = useState<Record<string, any>>(filters)
+  const [columnFilters, setColumnFilters] = useState<Record<string, {value: any, operator: string}>>({})
 
   // Apply filters
   const applyFilters = () => {
-    changeFilters(localFilters)
+    // Merge global search with column-specific filters
+    const mergedFilters = { ...localFilters }
+    
+    // Only include non-empty column filters
+    Object.entries(columnFilters).forEach(([key, filter]) => {
+      if (filter.value !== '' && filter.value !== null && filter.value !== undefined) {
+        mergedFilters[key] = filter
+      }
+    })
+    
+    changeFilters(mergedFilters)
     setShowFilters(false)
   }
 
   // Reset filters
   const resetFilters = () => {
     setLocalFilters({})
+    setColumnFilters({}) 
     changeFilters({})
   }
+
+  // Render appropriate filter control based on column type
+  const renderFilterControl = (column: Column) => {
+    const filter = columnFilters[column.key] || { value: '', operator: 'eq' };
+    
+    const updateFilter = (value: any, operator = filter.operator) => {
+      setColumnFilters(prev => ({
+        ...prev,
+        [column.key]: { value, operator }
+      }));
+      
+      // Update the localFilters object which is used when applying filters
+      setLocalFilters(prev => ({
+        ...prev,
+        [column.key]: { value, operator }
+      }));
+    };
+    
+    // Default operators
+    const operators = [
+      { value: 'eq', label: 'Equals' },
+      { value: 'neq', label: 'Not Equals' },
+      { value: 'contains', label: 'Contains' },
+      { value: 'starts', label: 'Starts With' },
+      { value: 'ends', label: 'Ends With' }
+    ];
+    
+    // Number-specific operators
+    const numberOperators = [
+      { value: 'eq', label: 'Equals' },
+      { value: 'neq', label: 'Not Equals' },
+      { value: 'gt', label: 'Greater Than' },
+      { value: 'gte', label: 'Greater/Equal' },
+      { value: 'lt', label: 'Less Than' },
+      { value: 'lte', label: 'Less/Equal' }
+    ];
+    
+    // Date-specific operators
+    const dateOperators = [
+      { value: 'eq', label: 'Equals' },
+      { value: 'neq', label: 'Not Equals' },
+      { value: 'gt', label: 'After' },
+      { value: 'gte', label: 'On or After' },
+      { value: 'lt', label: 'Before' },
+      { value: 'lte', label: 'On or Before' }
+    ];
+    
+    switch (column.type) {
+      case 'number':
+      case 'currency':
+      case 'percentage':
+        return (
+          <div className="flex space-x-2">
+            <select
+              value={filter.operator}
+              onChange={(e) => updateFilter(filter.value, e.target.value)}
+              className="flex-shrink-0 w-24 border border-gray-300 rounded px-1 py-1 text-xs"
+            >
+              {numberOperators.map(op => (
+                <option key={op.value} value={op.value}>{op.label}</option>
+              ))}
+            </select>
+            <input
+              type="number"
+              value={filter.value || ''}
+              onChange={(e) => updateFilter(e.target.value)}
+              className="w-full border border-gray-300 rounded px-2 py-1 text-xs"
+              placeholder={`Filter by ${column.label.toLowerCase()}`}
+            />
+          </div>
+        );
+      
+      case 'date':
+        return (
+          <div className="flex space-x-2">
+            <select
+              value={filter.operator}
+              onChange={(e) => updateFilter(filter.value, e.target.value)}
+              className="flex-shrink-0 w-24 border border-gray-300 rounded px-1 py-1 text-xs"
+            >
+              {dateOperators.map(op => (
+                <option key={op.value} value={op.value}>{op.label}</option>
+              ))}
+            </select>
+            <input
+              type="date"
+              value={filter.value || ''}
+              onChange={(e) => updateFilter(e.target.value)}
+              className="w-full border border-gray-300 rounded px-2 py-1 text-xs"
+            />
+          </div>
+        );
+      
+      case 'status':
+      case 'select':
+        // For picklist fields like industry, company size, lead status, etc.
+        const picklistType = column.key === 'industryId' ? 'industries' :
+                            column.key === 'sizeId' ? 'companysizes' :
+                            column.key === 'statusId' ? 'leadstatuses' :
+                            column.key === 'temperatureId' ? 'leadtemperatures' :
+                            null;
+                            
+        if (picklistType) {
+          return (
+            <PicklistFilter
+              entityType={picklistType}
+              value={filter.value || null}
+              onChange={(value) => updateFilter(value)}
+              placeholder={`Select ${column.label.toLowerCase()}`}
+              operator={filter.operator}
+              onOperatorChange={(op) => updateFilter(filter.value, op)}
+              showOperator={true}
+            />
+          );
+        }
+        
+        // Fallback for other select fields
+        return (
+          <div className="flex space-x-2">
+            <select
+              value={filter.operator}
+              onChange={(e) => updateFilter(filter.value, e.target.value)}
+              className="flex-shrink-0 w-24 border border-gray-300 rounded px-1 py-1 text-xs"
+            >
+              {operators.slice(0, 2).map(op => (
+                <option key={op.value} value={op.value}>{op.label}</option>
+              ))}
+            </select>
+            <input
+              type="text"
+              value={filter.value || ''}
+              onChange={(e) => updateFilter(e.target.value)}
+              className="w-full border border-gray-300 rounded px-2 py-1 text-xs"
+              placeholder={`Select ${column.label.toLowerCase()}`}
+            />
+          </div>
+        );
+      
+      case 'boolean':
+        return (
+          <select
+            value={filter.value || ''}
+            onChange={(e) => updateFilter(e.target.value)}
+            className="w-full border border-gray-300 rounded px-2 py-1 text-xs"
+          >
+            <option value="">Any</option>
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+          </select>
+        );
+      
+      default: // text, link, etc.
+        return (
+          <div className="flex space-x-2">
+            <select
+              value={filter.operator}
+              onChange={(e) => updateFilter(filter.value, e.target.value)}
+              className="flex-shrink-0 w-24 border border-gray-300 rounded px-1 py-1 text-xs"
+            >
+              {operators.map(op => (
+                <option key={op.value} value={op.value}>{op.label}</option>
+              ))}
+            </select>
+            <input
+              type="text"
+              value={filter.value || ''}
+              onChange={(e) => updateFilter(e.target.value)}
+              className="w-full border border-gray-300 rounded px-2 py-1 text-xs"
+              placeholder={`Filter by ${column.label.toLowerCase()}`}
+            />
+          </div>
+        );
+    }
+  };
 
   // Format cell value based on column type
   const formatCellValue = (value: any, column: Column) => {
@@ -187,51 +374,73 @@ export function EntityList({
       {/* Filters */}
       {showFilters && (
         <div className="px-6 py-4 border-b border-gray-200 bg-gray-50">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Search
-              </label>
-              <input
-                type="text"
-                placeholder="Search..."
-                value={localFilters.search || ''}
-                onChange={(e) => setLocalFilters(prev => ({ ...prev, search: e.target.value }))}
-                className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-            
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Page Size
-              </label>
-              <select
-                value={pageSize}
-                onChange={(e) => changePageSize(Number(e.target.value))}
-                className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
-                <option value={10}>10 per page</option>
-                <option value={20}>20 per page</option>
-                <option value={50}>50 per page</option>
-                <option value={100}>100 per page</option>
-              </select>
-            </div>
+          <div className="mb-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Global Search
+                </label>
+                <input
+                  type="text"
+                  placeholder="Search across all fields..."
+                  value={localFilters.search || ''}
+                  onChange={(e) => setLocalFilters(prev => ({ ...prev, search: e.target.value }))}
+                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+              
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Page Size
+                </label>
+                <select
+                  value={pageSize}
+                  onChange={(e) => changePageSize(Number(e.target.value))}
+                  className="w-full border border-gray-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                  <option value={10}>10 per page</option>
+                  <option value={20}>20 per page</option>
+                  <option value={50}>50 per page</option>
+                  <option value={100}>100 per page</option>
+                </select>
+              </div>
 
-            <div className="flex items-end space-x-2">
-              <button
-                onClick={applyFilters}
-                className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 text-sm"
-              >
-                Apply
-              </button>
-              <button
-                onClick={resetFilters}
-                className="px-4 py-2 border border-gray-300 text-gray-700 rounded hover:bg-gray-50 text-sm"
-              >
-                Reset
-              </button>
+              <div className="flex items-end space-x-2">
+                <button
+                  onClick={applyFilters}
+                  className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 text-sm"
+                >
+                  Apply
+                </button>
+                <button
+                  onClick={resetFilters}
+                  className="px-4 py-2 border border-gray-300 text-gray-700 rounded hover:bg-gray-50 text-sm"
+                >
+                  Reset
+                </button>
+              </div>
             </div>
           </div>
+          
+          {/* Column-specific filters */}
+          {currentView && currentView.columns && currentView.columns.filter(col => col.filterable).length > 0 && (
+            <div>
+              <h3 className="text-sm font-medium text-gray-700 mb-3 border-b pb-2">Column Filters</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {currentView.columns
+                  .filter(column => column.filterable)
+                  .map(column => (
+                    <div key={column.key} className="space-y-1">
+                      <label className="block text-xs font-medium text-gray-500">
+                        {column.label}
+                      </label>
+                      {renderFilterControl(column)}
+                    </div>
+                  ))
+                }
+              </div>
+            </div>
+          )}
         </div>
       )}
 
@@ -240,7 +449,7 @@ export function EntityList({
         <table className="min-w-full divide-y divide-gray-200">
           <thead className="bg-gray-50">
             <tr>
-              {currentView?.columns.map((column) => (
+              {currentView && currentView.columns && currentView.columns.map((column) => (
                 <th
                   key={column.key}
                   className={`px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider ${
@@ -267,7 +476,7 @@ export function EntityList({
           <tbody className="bg-white divide-y divide-gray-200">
             {loading ? (
               <tr>
-                <td colSpan={currentView?.columns.length || 1} className="px-6 py-12 text-center">
+                <td colSpan={(currentView && currentView.columns ? currentView.columns.length : 0) || 1} className="px-6 py-12 text-center">
                   <div className="flex items-center justify-center">
                     <RefreshCw className="w-6 h-6 animate-spin text-gray-400 mr-2" />
                     <span className="text-gray-500">Loading...</span>
@@ -276,7 +485,7 @@ export function EntityList({
               </tr>
             ) : entities.length === 0 ? (
               <tr>
-                <td colSpan={currentView?.columns.length || 1} className="px-6 py-12 text-center">
+                <td colSpan={(currentView && currentView.columns ? currentView.columns.length : 0) || 1} className="px-6 py-12 text-center">
                   <span className="text-gray-500">No {entityType} found</span>
                 </td>
               </tr>
@@ -289,7 +498,7 @@ export function EntityList({
                     onEntityClick ? 'cursor-pointer' : ''
                   }`}
                 >
-                  {currentView?.columns.map((column) => (
+                  {currentView && currentView.columns && currentView.columns.map((column) => (
                     <td
                       key={column.key}
                       className={`px-6 py-4 whitespace-nowrap text-sm text-gray-900 ${
